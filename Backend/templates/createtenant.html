@@ -1,0 +1,324 @@
+<!--<h1>Sweet Types</h1>
+<ul>
+    {% for sweet_type in sweet_types %}
+    <p>Name: {{ sweet_type.name }}</p>
+    <p>Username: {{ sweet_type.username }}</p>
+    <p>Password: {{ sweet_type.password }}</p>
+    <p>Email: {{ sweet_type.email }}</p>
+    <p>Domain Name: {{ sweet_type.domainname }}</p>
+    <hr>
+    {% endfor %}
+</ul>
+
+
+
+
+
+
+
+
+
+
+<h1>قائمة بيانات جدول confirmserial</h1>
+    <ul>
+        {% for entry in confirm_serial_entries %}
+            <li>Username: {{ entry.username }}</li>
+            <li>Serial: {{ entry.serial }}</li>
+            <li>Confirm Serial: {{ entry.confirmserial }}</li>
+            
+            <hr>
+        {% endfor %}
+    </ul>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="fr">
+  {% load static %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Page 2</title>
+    <link rel="stylesheet" href="{% static 'serialstor/nicepage.css' %}" media="screen">
+<link rel="stylesheet" href="{% static 'serialstor/Page-2.css' %}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static 'serialstor/jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'serialstor/nicepage.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'bboy/js/listebox.js' %}" defer=""></script>
+    <meta name="generator" content="Nicepage 5.2.0, nicepage.com">
+    <meta name="referrer" content="origin">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "images/logosahlaSHOP.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Page 2">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body u-xl-mode" data-lang="fr"><header class="u-clearfix u-grey-75 u-header u-header" id="sec-df96"><div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1">
+        <a href="https://nicepage.com" class="u-hidden-xs u-image u-logo u-image-1" data-image-width="668" data-image-height="254">
+          <img src="{% static 'inscription2/images/logosahlaSHOP.png'%}" class="u-logo-image u-logo-image-1">
+        </a>
+        <p class="u-text u-text-default u-text-1" style="font-family: Cairo;font-size: 1.2rem;">    إنشاء حساب  </p>
+      </div></header>
+    <section class="u-clearfix u-palette-3-base u-section-1" id="sec-df9e">
+      <div class="u-clearfix u-sheet u-sheet-1">
+      
+        <div class="u-align-center u-form u-form-1">
+
+  
+
+
+
+
+
+
+
+
+        
+          {% for sweet_type in sweet_types %}
+            {% for entry in confirm_serial_entries %}
+              {% if sweet_type.name == entry.username %}
+
+
+
+              
+
+              <style>
+          
+          
+                form {
+                  text-align: center;
+                }
+              
+                form input {
+                  width: 100%;
+                  display: block;
+                  padding: 10px 12px;
+                  background-image: none;
+                  background-clip: padding-box;
+                  border: none;
+                  border-radius: 3px;
+                  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+                  height: auto;
+                  background-color: #f2f2f2;
+                  margin-bottom: 10px; /* إضافة مسافة بين حقول الإدخال */
+                }
+              
+                form button[type="submit"] {
+                  border-style: none;
+                  text-transform: uppercase;
+                  font-size: 1.25rem;
+                  letter-spacing: 1px;
+                  font-weight: 700;
+                  font-family: Cairo;
+                  padding: 14px 132px;
+                  color: #ffffff !important;
+                  background-color: #478ac9 !important;
+                  width: 100%;
+                  margin-top: 10px; /* إضافة مسافة بين زر الإرسال والحقول */
+                }
+              
+                .message {
+                  font-family: Cairo;
+                  text-align: center;
+                  font-size: 1.5rem;
+                  margin-bottom: 20px;
+                  margin-top: 20px;
+                }
+              </style>
+                <h1  id="show" style="font-size: 0.5rem; color: #ffcb89;" >show</h1>
+
+
+              <h1 style="font-family: Cairo;font-size: 1.5rem;">أدخل البريد الإلكتروني الخاص بك</h1>
+              <form method="post">
+                {% csrf_token %}
+                <p>
+                  <label for="id_username" style="font-family: Cairo;float: right;">إسم المستخدم</label> 
+                  <input type="text" name="username" maxlength="150" required="" id="id_username" value="{{ sweet_type.name }}" readonly ></p>
+                <p>
+                  <label for="id_email"style="font-family: Cairo;float: right;">البريد الإلكتروني</label>
+                   <input type="email" name="email" required="" id="id_email">
+                </p>
+                <p>
+                  <label for="id_password"style="font-family: Cairo;float: right;">كلمة السر</label> 
+                  <input type="password" name="password" required="" id="id_password" value="{{ sweet_type.password }}" readonly>
+                </p>
+                <input type="submit" value="التالي" style="border-radius: 10px;color: #ffffff !important;background-color: #33c6dd !important;font-family: Cairo;font-size: 1.2rem;font-family: Cairo;font-size: 1.2rem;" >
+            </form>
+              {% else %}
+              
+             
+             
+
+
+              {% endif %}
+
+            {% endfor %}  
+          {% endfor %}  
+
+
+
+
+
+
+
+
+
+        <div id="hide">
+
+          <h1    style="font-family: Cairo;font-size: 1.125rem;"> أدخل كود تفعيل المتجر</h1>
+          <form method="post">
+            {% csrf_token %}
+           
+            <p>
+              <label for="id_username"style="font-family: Cairo;float: right;">إسم المستخدم</label> 
+              {% for sweet_type in sweet_types %}
+              <input type="text" name="username" maxlength="120" id="id_username" value="{{ sweet_type.name }}" readonly>
+              {% endfor %}
+        
+            <p>
+              <label for="id_confirmserial" style="font-family: Cairo;float: right;">أدخل كود تفعيل المتجر</label>   
+              <input type="text" name="confirmserial" maxlength="120" id="id_confirmserial">
+            </p>
+            <input type="submit" value="تفعيل" style="border-radius: 10px;color: #ffffff !important;background-color: #33c6dd !important;font-family: Cairo;font-size: 1.2rem;font-family: Cairo;font-size: 1.2rem;" >
+        </form>
+      </div>
+
+
+
+
+
+
+
+
+
+         
+
+
+      
+
+
+
+
+
+        
+   
+    
+      
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             
+        </div>
+      </div>
+    </section>
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-7f56"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-align-center u-small-text u-text u-text-variant u-text-1"style="font-family: Cairo;" > ©&nbsp;sahla dz&nbsp;جميع الحقوق محفوظة&nbsp;</p>
+      </div></footer>
+  
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

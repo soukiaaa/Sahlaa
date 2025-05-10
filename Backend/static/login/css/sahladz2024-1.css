@@ -1,0 +1,208 @@
+.u-section-1 .u-sheet-1 {
+  min-height: 658px;
+}
+
+.u-section-1 .u-layout-wrap-1 {
+  margin-top: 19px;
+  margin-bottom: 29px;
+}
+
+.u-section-1 .u-layout-cell-1 {
+  min-height: 610px;
+  background-size: cover;
+}
+
+.u-section-1 .u-container-layout-1 {
+  padding: 19px 30px;
+}
+
+.u-section-1 .u-image-1 {
+  height: 508px;
+  transition-duration: 0.5s;
+  margin-top: 0;
+  margin-bottom: 0;
+  transform: rotate(0deg) scale(1) translateX(0px) translateY(0px);
+}
+
+.u-section-1 .u-layout-cell-2 {
+  min-height: 610px;
+}
+
+.u-section-1 .u-container-layout-2 {
+  padding: 10px 0;
+}
+
+.u-section-1 .u-group-1 {
+  width: 453px;
+  height: auto;
+  min-height: 549px;
+  --radius: 5px;
+  --animation-custom_in-translate_x: 0px;
+  --animation-custom_in-translate_y: 0px;
+  --animation-custom_in-opacity: 0;
+  --animation-custom_in-rotate: 0deg;
+  --animation-custom_in-scale: 0.3;
+  margin: 27px auto -17px;
+}
+
+.u-section-1 .u-container-layout-3 {
+  padding: 1px 0;
+}
+
+.u-section-1 .u-text-1 {
+  width: 245px;
+  margin: 49px auto 0;
+}
+
+.u-section-1 .u-form-1 {
+  height: 225px;
+  width: 357px;
+  margin: 0 auto;
+}
+
+.u-section-1 .u-input-1 {
+  text-transform: uppercase;
+  --radius: 4px;
+}
+
+.u-section-1 .u-input-2 {
+  text-transform: uppercase;
+  --radius: 4px;
+}
+
+.u-section-1 .u-btn-1 {
+  background-image: none;
+  border-style: solid;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: 100%;
+  --radius: 6px;
+  padding: 10px 0;
+}
+
+.u-section-1 .u-text-2 {
+  margin: 61px auto 0;
+}
+
+.u-section-1 .u-btn-2 {
+  --radius: 6px;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  background-image: none;
+  margin: 23px auto 0;
+  padding: 8px 142px 8px 140px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 463px;
+  }
+
+  .u-section-1 .u-layout-cell-1 {
+    background-repeat: no-repeat;
+    min-height: 503px;
+  }
+
+  .u-section-1 .u-image-1 {
+    height: 408px;
+  }
+
+  .u-section-1 .u-layout-cell-2 {
+    background-position: 58.69% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 579px;
+  }
+
+  .u-section-1 .u-group-1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: auto;
+  }
+
+  .u-section-1 .u-btn-2 {
+    padding-left: 111px;
+    padding-right: 111px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 315px;
+  }
+
+  .u-section-1 .u-layout-cell-1 {
+    min-height: 579px;
+  }
+
+  .u-section-1 .u-container-layout-1 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .u-section-1 .u-image-1 {
+    height: 354px;
+    margin-top: 94px;
+  }
+
+  .u-section-1 .u-group-1 {
+    margin-right: initial;
+    margin-left: initial;
+    width: auto;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 658px;
+  }
+
+  .u-section-1 .u-layout-cell-1 {
+    min-height: 869px;
+  }
+
+  .u-section-1 .u-image-1 {
+    height: 531px;
+  }
+
+  .u-section-1 .u-layout-cell-2 {
+    min-height: 100px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 388px;
+  }
+
+  .u-section-1 .u-layout-cell-1 {
+    min-height: 372px;
+  }
+
+  .u-section-1 .u-image-1 {
+    height: 334px;
+    margin-top: 0;
+  }
+
+  .u-section-1 .u-form-1 {
+    width: 340px;
+  }
+}
+
+.u-section-1 .u-image-1,
+.u-section-1 .u-image-1:before,
+.u-section-1 .u-image-1 > .u-container-layout:before {
+  transition-property: fill, color, background-color, stroke-width, border-style, border-width, border-top-width, border-left-width, border-right-width, border-bottom-width, custom-border, borders, box-shadow, text-shadow, opacity, border-radius, stroke, border-color, font-size, font-style, font-weight, text-decoration, letter-spacing, transform, background-image, image-zoom, background-size, background-position;
+}
+
+.u-section-1 .u-image-1.u-image-1.u-image-1:hover {
+  transform: scale(1.1) translateX(0px) translateY(0px) !important;
+}
+
+.u-section-1 .u-image-1.u-image-1.u-image-1.hover {
+  transform: scale(1.1) translateX(0px) translateY(0px) !important;
+}

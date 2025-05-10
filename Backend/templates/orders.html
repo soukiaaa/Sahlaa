@@ -1,0 +1,600 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="fr"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Contact Us">
+    <meta name="description" content="">
+    <title>sahladz</title>
+
+  
+
+    <link rel="stylesheet" href="{% static 'orders/css/nicepage.css' %}" media="screen">
+<link rel="stylesheet" href="{% static 'orders/css/fimo.css' %}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static 'orders/js/jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'orders/js/nicepage.js' %}" defer=""></script>
+    <meta name="generator" content="Nicepage 6.8.2, nicepage.com">
+    <meta name="referrer" content="origin">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "images/logosahlaSHOP.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="fimo">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+
+
+
+
+
+
+
+
+
+
+
+  {% if request.user.is_authenticated %}
+  {% else %}
+
+  <link rel="shortcut icon" type="image/x-icon" href="bboy/img/favicon.png">
+  <!-- CSS here -->
+      <link rel="stylesheet" href="{% static 'bboy/css/preloader.css' %}">
+      <link rel="stylesheet" href="{% static 'bboy/css/bootstrap.css' %}">
+      <link rel="stylesheet" href="{% static 'bboy/css/meanmenu.css' %}">
+      <link rel="stylesheet" href="{% static 'bboy/css/animate.css' %}">
+      <link rel="stylesheet" href="{% static 'bboy/css/owl-carousel.css' %}">
+      <link rel="stylesheet" href="{% static 'bboy/css/swiper-bundle.css' %}">
+      <link rel="stylesheet" href="{% static 'bboy/css/backtotop.css' %}">
+      <link rel="stylesheet" href="{% static 'bboy/css/magnific-popup.css' %}">
+      <link rel="stylesheet" href="{% static 'bboy/css/nice-select.css' %}">
+      <link rel="stylesheet" href="{% static 'bboy/flaticon/flaticon.css' %}">
+      <link rel="stylesheet" href="{% static 'bboy/css/font-awesome-pro.css' %}">
+      <link rel="stylesheet" href="{% static 'bboy/css/default.css' %}">
+      <link rel="stylesheet" href="{% static 'bboy/css/style.css' %}">
+
+  <body>
+    <header class="u-clearfix u-grey-75 u-header u-header" id="sec-df96"><div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1">
+      <a href="/" class="u-hidden-xs u-image u-logo u-image-1" data-image-width="668" data-image-height="254">
+        <img src="{% static 'dashboard_pge1/css/images/logosahlaSHOP.png' %}" class="u-logo-image u-logo-image-1">
+      </a>
+      <p class="u-text u-text-default u-text-1"> نعدكم بأفضل خدمة زبائن ، وأحسن الأسعار</p>
+    </div></header>
+      <div class="container">
+    
+          <div class="container-fluid col-xxl-8 px-4 py-5">
+              <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                  {% if messages %}
+                      <div class="container mt-3">
+                          <div class="messages">
+                              {% for message in messages %}
+                                  {% if message.tags %}
+                                  <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                                      {{ message }}
+                                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                  </div>
+                                  {% endif %}
+                              {% endfor %}
+                          </div>
+                      </div>
+                  {% endif %}
+  
+    
+                  <div class="col-10 col-sm-8 col-lg-6">
+  
+                      {% if request.user.is_authenticated %}
+                          <img src="{{ profile.avatar.url }}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                          width="700" height="500" loading="lazy">
+  
+                           
+                      {% else %}
+                          <img src="{% static 'serialstor/images/adsstor.png' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                          width="700" height="500" loading="lazy">
+                      {% endif %}
+                  </div>
+                  <div class="col-lg-6">
+                      {% if request.user.is_authenticated %}
+  
+                      
+                      {% endif %}
+                      <h1 class=" fw-bold lh-1 mb-3" style=" font-size: 1.6rem; font-family: Cairo; ">تسجيل دخول او فتح حساب جديد</h1>
+                      <p class="bio-para">
+                          {% if request.user.is_authenticated %} 
+                          
+                          {{ profile.bio }}
+                          
+                          {% else %}
+  
+                          &nbsp;
+  
+                          {% endif %}
+                      
+                      </p>
+                      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                          {% if not request.user.is_authenticated %}
+                              <a href="{% url 'register_view' %}"><button type="button" class="btn btn-primary btn-md px-4 me-md-2" style=" font-family: Cairo; ">إنشاء حساب </button></a>
+                              <a href="{%url 'login_view' %}"><button type="button" class="btn btn-success btn-md px-4 me-md-2" style=" font-family: Cairo; ">تسجيل دخول</button></a>
+                          {% else %}
+                              <a href="{% url 'logout_view' %}"><button type="button" class="btn btn-danger btn-md px-4 me-md-2">Logout</button></a>
+                          {% endif %}
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="b-example-divider"></div>
+  
+      </div>
+  
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+     
+  </body>
+  
+  
+  </html>
+  {% endif %}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {% if request.user.is_authenticated %}
+  <body data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="fr"><header class="u-clearfix u-header u-palette-3-base u-header" id="sec-df96"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="https://nicepage.com" class="u-hidden-xs u-image u-logo u-image-1" data-image-width="668" data-image-height="254">
+          <img src="{% static 'orders/images/logosahlaSHOP.png' %}" class="u-logo-image u-logo-image-1">
+        </a>
+        <p class="u-align-center-xs u-text u-text-default u-text-1" style="  font-family: Cairo; "> نعدكم بأفضل خدمة زبائن ، وأحسن الأسعار</p>
+      </div></header>
+    <section class="u-clearfix u-section-1" id="sec-a6cf">
+      <div class="u-container-style u-expanded-width u-grey-5 u-group u-radius-6 u-shape-round u-group-1">
+        <div class="u-container-layout u-container-layout-1"><span class="u-align-center u-icon u-text-palette-1-base u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 55 55" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-9dcd"></use></svg><svg class="u-svg-content" viewBox="0 0 55 55" x="0px" y="0px" id="svg-9dcd" style="enable-background:new 0 0 55 55;"><path d="M55,27.5C55,12.337,42.663,0,27.5,0S0,12.337,0,27.5c0,8.009,3.444,15.228,8.926,20.258l-0.026,0.023l0.892,0.752
+	c0.058,0.049,0.121,0.089,0.179,0.137c0.474,0.393,0.965,0.766,1.465,1.127c0.162,0.117,0.324,0.234,0.489,0.348
+	c0.534,0.368,1.082,0.717,1.642,1.048c0.122,0.072,0.245,0.142,0.368,0.212c0.613,0.349,1.239,0.678,1.88,0.98
+	c0.047,0.022,0.095,0.042,0.142,0.064c2.089,0.971,4.319,1.684,6.651,2.105c0.061,0.011,0.122,0.022,0.184,0.033
+	c0.724,0.125,1.456,0.225,2.197,0.292c0.09,0.008,0.18,0.013,0.271,0.021C25.998,54.961,26.744,55,27.5,55
+	c0.749,0,1.488-0.039,2.222-0.098c0.093-0.008,0.186-0.013,0.279-0.021c0.735-0.067,1.461-0.164,2.178-0.287
+	c0.062-0.011,0.125-0.022,0.187-0.034c2.297-0.412,4.495-1.109,6.557-2.055c0.076-0.035,0.153-0.068,0.229-0.104
+	c0.617-0.29,1.22-0.603,1.811-0.936c0.147-0.083,0.293-0.167,0.439-0.253c0.538-0.317,1.067-0.648,1.581-1
+	c0.185-0.126,0.366-0.259,0.549-0.391c0.439-0.316,0.87-0.642,1.289-0.983c0.093-0.075,0.193-0.14,0.284-0.217l0.915-0.764
+	l-0.027-0.023C51.523,42.802,55,35.55,55,27.5z M2,27.5C2,13.439,13.439,2,27.5,2S53,13.439,53,27.5
+	c0,7.577-3.325,14.389-8.589,19.063c-0.294-0.203-0.59-0.385-0.893-0.537l-8.467-4.233c-0.76-0.38-1.232-1.144-1.232-1.993v-2.957
+	c0.196-0.242,0.403-0.516,0.617-0.817c1.096-1.548,1.975-3.27,2.616-5.123c1.267-0.602,2.085-1.864,2.085-3.289v-3.545
+	c0-0.867-0.318-1.708-0.887-2.369v-4.667c0.052-0.52,0.236-3.448-1.883-5.864C34.524,9.065,31.541,8,27.5,8
+	s-7.024,1.065-8.867,3.168c-2.119,2.416-1.935,5.346-1.883,5.864v4.667c-0.568,0.661-0.887,1.502-0.887,2.369v3.545
+	c0,1.101,0.494,2.128,1.34,2.821c0.81,3.173,2.477,5.575,3.093,6.389v2.894c0,0.816-0.445,1.566-1.162,1.958l-7.907,4.313
+	c-0.252,0.137-0.502,0.297-0.752,0.476C5.276,41.792,2,35.022,2,27.5z">
+</path>
+</svg>
+</span>
+{% if request.user.is_authenticated %} 
+<span class="u-align-center u-file-icon u-icon u-icon-2">
+  <a href="{% url 'logout_view' %}" >
+    <img src="{% static 'orders/images/149698.png' %}" alt="">
+  </a>
+</span>
+          <h6 class="u-align-center u-text u-text-default u-text-1">wolcome: {{request.user.username}}</h6>
+
+          {% else %}
+          {% endif %}
+        </div>
+      </div>
+      <div class="custom-expanded data-layout-selected u-align-left-lg u-align-left-md u-align-left-sm u-align-left-xs u-clearfix u-grey-5 u-layout-wrap u-layout-wrap-1">
+        <div class="u-layout">
+
+       
+          <div class="u-layout-col">
+            <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+              <div class="u-container-layout u-container-layout-2">
+                <div class="u-align-center-xs u-palette-3-base u-radius u-shape u-shape-round u-shape-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""></div>
+                <p class="u-align-center-xs u-text u-text-default u-text-2">ملغي 0</p><span class="u-icon u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 54.757 54.757" style=""><use xlink:href="#svg-4ff2"></use></svg><svg class="u-svg-content" viewBox="0 0 54.757 54.757" x="0px" y="0px" id="svg-4ff2" style="enable-background:new 0 0 54.757 54.757;"><path d="M40.94,5.617C37.318,1.995,32.502,0,27.38,0c-5.123,0-9.938,1.995-13.56,5.617c-6.703,6.702-7.536,19.312-1.804,26.952
+	L27.38,54.757L42.721,32.6C48.476,24.929,47.643,12.319,40.94,5.617z M27.557,26c-3.859,0-7-3.141-7-7s3.141-7,7-7s7,3.141,7,7
+	S31.416,26,27.557,26z"></path></svg></span>
+                <div class="u-palette-3-base u-radius u-shape u-shape-round u-shape-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""></div>
+                <p class="u-align-center-xs u-text u-text-default u-text-3">مؤكدة 0</p><span class="u-icon u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 54.757 54.757" style=""><use xlink:href="#svg-0dd5"></use></svg><svg class="u-svg-content" viewBox="0 0 54.757 54.757" x="0px" y="0px" id="svg-0dd5" style="enable-background:new 0 0 54.757 54.757;"><path d="M40.94,5.617C37.318,1.995,32.502,0,27.38,0c-5.123,0-9.938,1.995-13.56,5.617c-6.703,6.702-7.536,19.312-1.804,26.952
+	L27.38,54.757L42.721,32.6C48.476,24.929,47.643,12.319,40.94,5.617z M27.557,26c-3.859,0-7-3.141-7-7s3.141-7,7-7s7,3.141,7,7
+	S31.416,26,27.557,26z"></path></svg></span>
+                <div class="u-palette-3-base u-radius u-shape u-shape-round u-shape-3" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""></div>
+                <p class="u-align-center-xs u-text u-text-default u-text-4">جديد 0</p><span class="u-icon u-icon-5"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 54.757 54.757" style=""><use xlink:href="#svg-6e27"></use></svg><svg class="u-svg-content" viewBox="0 0 54.757 54.757" x="0px" y="0px" id="svg-6e27" style="enable-background:new 0 0 54.757 54.757;"><path d="M40.94,5.617C37.318,1.995,32.502,0,27.38,0c-5.123,0-9.938,1.995-13.56,5.617c-6.703,6.702-7.536,19.312-1.804,26.952
+	L27.38,54.757L42.721,32.6C48.476,24.929,47.643,12.319,40.94,5.617z M27.557,26c-3.859,0-7-3.141-7-7s3.141-7,7-7s7,3.141,7,7
+	S31.416,26,27.557,26z"></path></svg></span>
+                <div class="custom-expanded u-clearfix u-container-align-center-xs u-container-align-right-sm u-group-elements u-valign-top-sm u-valign-top-xs u-group-elements-1">
+                  <div class="u-absolute-hcenter-xs u-expanded u-palette-3-base u-radius u-shape u-shape-round u-shape-4"></div>
+                </div><span class="u-icon u-icon-6"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 54.757 54.757" style=""><use xlink:href="#svg-0448"></use></svg><svg class="u-svg-content" viewBox="0 0 54.757 54.757" x="0px" y="0px" id="svg-0448" style="enable-background:new 0 0 54.757 54.757;"><path d="M40.94,5.617C37.318,1.995,32.502,0,27.38,0c-5.123,0-9.938,1.995-13.56,5.617c-6.703,6.702-7.536,19.312-1.804,26.952
+	L27.38,54.757L42.721,32.6C48.476,24.929,47.643,12.319,40.94,5.617z M27.557,26c-3.859,0-7-3.141-7-7s3.141-7,7-7s7,3.141,7,7
+	S31.416,26,27.557,26z"></path></svg></span>
+                <div class="u-clearfix u-group-elements u-group-elements-2"></div>
+                <p class="u-align-center-xs u-align-right-xl u-text u-text-default u-text-5">الكل {{ total_orders }}</p>
+                <div class="u-align-center-xs u-palette-3-base u-radius u-shape u-shape-round u-shape-5" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""></div>
+                <p class="u-align-center-xs u-text u-text-default u-text-6">قيد التأكيد 0</p><span class="u-icon u-icon-7"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 54.757 54.757" style=""><use xlink:href="#svg-1d57"></use></svg><svg class="u-svg-content" viewBox="0 0 54.757 54.757" x="0px" y="0px" id="svg-1d57" style="enable-background:new 0 0 54.757 54.757;"><path d="M40.94,5.617C37.318,1.995,32.502,0,27.38,0c-5.123,0-9.938,1.995-13.56,5.617c-6.703,6.702-7.536,19.312-1.804,26.952
+	L27.38,54.757L42.721,32.6C48.476,24.929,47.643,12.319,40.94,5.617z M27.557,26c-3.859,0-7-3.141-7-7s3.141-7,7-7s7,3.141,7,7
+	S31.416,26,27.557,26z"></path></svg></span>
+              </div>
+            </div>
+            <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+              <div class="u-container-layout u-container-layout-3">
+                <div class="u-align-center u-form u-form-1">
+                  <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-horizontal u-form-spacing-0 u-inner-form" style="padding: 0px;" source="email">
+                    <div class="u-form-email u-form-group u-label-none u-form-group-1">
+                      <label for="email-ef64" class="u-label">Email</label>
+                      <input type="email" placeholder="ابحث برقم الطلب ، أو باسم العميل أو هاتفه" id="email-ef64" name="email" class="u-input u-input-rectangle" required="">
+                    </div>
+                    <div class="u-form-group u-form-submit">
+                      <a href="#" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-grey-15 u-hover-grey-10 u-radius u-btn-1">إبحث</a>
+                      <input type="submit" value="submit" class="u-form-control-hidden">
+                    </div>
+                    <div class="u-form-send-message u-form-send-success">#FormSendSuccess</div>
+                    <div class="u-form-send-error u-form-send-message">#FormSendError</div>
+                    <input type="hidden" value="" name="recaptchaResponse">
+                    <input type="hidden" name="formServices" value="c270deca9879bb5930bd1acd06a29a95">
+                  </form>
+                </div>
+                <a href="#" class="u-border-none u-btn u-btn-round u-button-style u-grey-15 u-hover-grey-10 u-radius u-btn-2">الكل </a>
+                <a href="#" class="u-border-none u-btn u-btn-round u-button-style u-grey-15 u-hover-grey-10 u-radius u-btn-3">اليوم </a>
+                <a href="#" class="u-border-none u-btn u-btn-round u-button-style u-grey-15 u-hover-grey-10 u-radius u-btn-4">7 أيام </a>
+                <a href="#" class="u-border-none u-btn u-btn-round u-button-style u-grey-15 u-hover-grey-10 u-radius u-btn-5">شهر </a><span class="u-icon u-text-grey-15 u-icon-8"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 60 60" style=""><use xlink:href="#svg-6fca"></use></svg><svg class="u-svg-content" viewBox="0 0 60 60" x="0px" y="0px" id="svg-6fca" style="enable-background:new 0 0 60 60;"><g><rect x="22" y="43" width="7" height="7"></rect><rect x="22" y="25" width="7" height="7"></rect><rect x="22" y="34" width="7" height="7"></rect><rect x="13" y="34" width="7" height="7"></rect><rect x="13" y="25" width="7" height="7"></rect><rect x="13" y="43" width="7" height="7"></rect><rect x="40" y="25" width="7" height="7"></rect><path d="M57,4h-7V1c0-0.553-0.447-1-1-1h-7c-0.553,0-1,0.447-1,1v3H19V1c0-0.553-0.447-1-1-1h-7c-0.553,0-1,0.447-1,1v3H3
+		C2.447,4,2,4.447,2,5v11v43c0,0.553,0.447,1,1,1h54c0.553,0,1-0.447,1-1V16V5C58,4.447,57.553,4,57,4z M49,32v2v7v2v9h-9h-2h-7h-2
+		h-7h-2h-9v-9v-2v-7v-2v-9h9h2h7h2h7h2h9V32z M56,15H4V6h6v3c0,0.553,0.447,1,1,1h7c0.553,0,1-0.447,1-1V6h22v3c0,0.553,0.447,1,1,1
+		h7c0.553,0,1-0.447,1-1V6h6V15z"></path><rect x="40" y="34" width="7" height="7"></rect><rect x="40" y="43" width="7" height="7"></rect><rect x="31" y="43" width="7" height="7"></rect><rect x="31" y="34" width="7" height="7"></rect><rect x="31" y="25" width="7" height="7"></rect>
+</g></svg></span>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+      </div>
+      <div class="u-container-style u-custom-color-3 u-group u-group-2">
+        <div    class="u-container-layout u-container-layout-4">
+          <div class="u-align-center u-container-align-right-lg u-container-align-right-md u-container-align-right-xl u-container-style u-expanded-width u-grey-15 u-group u-radius-10 u-shape-round u-group-3">
+            <div class="u-container-layout u-container-layout-5">
+              <span class="u-align-center-sm u-align-center-xs u-align-right-lg u-align-right-md u-align-right-xl u-file-icon u-grey-70 u-icon u-icon-circle u-icon-9">
+              <img src="{% static 'orders/images/61125-b77a6ca2.png' %}" alt=""></span>
+              <h6 class="u-align-right u-hidden-sm u-hidden-xs u-text u-text-default u-text-7" style=" font-size: 15px; font-family: Cairo; "><a href="/" >  المتجر</a></h6>
+            </div>
+          </div>
+          <div class="u-align-center u-container-align-right-xl u-container-style u-expanded-width u-grey-5 u-group u-radius-10 u-shape-round u-group-4">
+            <div id="bb" class="u-container-layout u-container-layout-6">
+              <a href="{% url 'dashboard' %}">
+               <span class="u-align-center-sm u-align-center-xs u-align-right-lg u-align-right-md u-align-right-xl u-file-icon u-grey-70 u-icon u-icon-circle u-icon-10">
+                <img src="{% static 'orders/images/5729968-81445200.png' %}" alt=""></span>
+               <h6 class="u-align-right u-hidden-sm u-hidden-xs u-text u-text-8" style=" font-size: 15px; font-family: Cairo; "><a href="{% url 'dashboard' %}" > الرئيسية </a></h6>
+              </a>
+            </div>
+          </div>
+          <div class="u-align-center u-container-align-right-lg u-container-align-right-md u-container-align-right-xl u-container-style u-expanded-width u-grey-5 u-group u-radius-10 u-shape-round u-group-5">
+            <div id="bb" class="u-container-layout u-container-layout-7">
+              <a href="{% url 'user' %}">
+               <span class="u-align-center-sm u-align-center-xs u-align-right-lg u-align-right-md u-align-right-xl u-file-icon u-grey-70 u-icon u-icon-circle u-icon-11"><img src="{% static 'orders/images/6541274-ca440fba.png' %}" alt=""></span>
+               <h6 class="u-align-right u-hidden-sm u-hidden-xs u-text u-text-default u-text-9" style=" font-size: 15px; font-family: Cairo; "><a href="{% url 'user' %}" > المستخدم</a></h6>
+              </a>
+           
+            </div>
+          </div>
+          <div class="u-align-center u-container-align-right-lg u-container-align-right-md u-container-align-right-xl u-container-style u-expanded-width u-grey-5 u-group u-radius-10 u-shape-round u-group-6">
+            <div id="bb" class="u-container-layout u-container-layout-8">
+              <a href="{% url 'orders' %}">
+              <span class="u-align-center-sm u-align-center-xs u-align-right-lg u-align-right-md u-align-right-xl u-file-icon u-icon u-text-grey-70 u-icon-12"><img src="{% static 'orders/images/10377929-6e2cb052.png' %}" alt=""></span>
+             
+              <h6 class="u-align-right u-hidden-sm u-hidden-xs u-text u-text-default u-text-10" style=" font-size: 15px; font-family: Cairo; "><a href="{% url 'orders' %}" > طلبيات</a></h6>
+            </a>
+            </div>
+          </div>
+          <div class="u-align-center u-container-align-right-lg u-container-align-right-md u-container-align-right-xl u-container-style u-expanded-width u-grey-5 u-group u-radius-10 u-shape-round u-group-7">
+            <div id="bb" class="u-container-layout u-container-layout-9">
+              <a href="{% url 'addproduct' %}">
+               <span class="u-align-center-sm u-align-center-xs u-align-right-lg u-align-right-md u-align-right-xl u-file-icon u-grey-70 u-icon u-icon-circle u-icon-13"><img src="{% static 'orders/images/9882820-b67bfa30.png' %}" alt=""></span>
+               <h6 class="u-align-right u-hidden-sm u-hidden-xs u-text u-text-11" style=" font-size: 15px; font-family: Cairo; "><a href="{% url 'addproduct' %}" >إضافة </a></h6>
+              </a>
+            </div>
+          </div>
+          <div class="u-align-center u-container-align-right-lg u-container-align-right-md u-container-align-right-xl u-container-style u-expanded-width u-grey-5 u-group u-radius-10 u-shape-round u-group-8">
+            <div id="bb" class="u-container-layout u-container-layout-10">
+              <a href="{% url 'products' %}">
+              <span class="u-align-center-sm u-align-center-xs u-align-right-lg u-align-right-md u-align-right-xl u-file-icon u-grey-70 u-icon u-icon-circle u-icon-14"><img src="{% static 'orders/images/10307827-52e8cff8.png' %}" alt=""></span>
+              <h6 class="u-align-right u-hidden-sm u-hidden-xs u-text u-text-default u-text-12" style=" font-size: 15px; font-family: Cairo; "><a href="{% url 'products' %}" > المنتجات</a></h6>
+            </a>
+            </div>
+          </div>
+          <div class="u-align-center u-container-align-right-lg u-container-align-right-md u-container-align-right-xl u-container-style u-expanded-width u-grey-5 u-group u-radius-10 u-shape-round u-group-9">
+            <div id="bb" class="u-container-layout u-container-layout-11">
+              <a href="{% url 'pixel' %}">
+               <span class="u-align-center-sm u-align-center-xs u-align-right-lg u-align-right-md u-align-right-xl u-file-icon u-grey-70 u-icon u-icon-circle u-icon-15"><img src="{% static 'orders/images/7067696-9f57c4d2.png' %}" alt=""></span>
+               <h6 class="u-align-right u-hidden-sm u-hidden-xs u-text u-text-13" style=" font-size: 15px; font-family: Cairo; "><a href="{% url 'pixel' %}" >  بكسل</a></h6>
+              </a>
+            </div>
+          </div>
+          <div class="u-align-center u-container-align-right-lg u-container-align-right-md u-container-align-right-xl u-container-style u-expanded-width u-grey-5 u-group u-radius-10 u-shape-round u-group-10">
+            <div id="bb" class="u-container-layout u-container-layout-12">
+              <a href="{% url 'subscriptions' %}">
+               <span class="u-align-center-sm u-align-center-xs u-align-right-lg u-align-right-md u-align-right-xl u-file-icon u-icon u-text-grey-70 u-icon-16"><img src="{% static 'orders/images/10179258-74743da7.png' %}" alt=""></span>
+               <h6 class="u-align-right u-hidden-sm u-hidden-xs u-text u-text-14" style=" font-size: 15px; font-family: Cairo; "><a href="{% url 'subscriptions' %}" > شحن </a></h6>
+             </a>
+            </div>
+          </div>
+          <div class="u-align-center u-container-align-right-lg u-container-align-right-md u-container-align-right-xl u-container-style u-expanded-width u-grey-5 u-group u-radius-10 u-shape-round u-group-11">
+            <div id="bb" class="u-container-layout u-container-layout-13">
+              <a href="{% url 'design' %}">
+               <span class="u-align-center-sm u-align-center-xs u-align-right-lg u-align-right-md u-align-right-xl u-file-icon u-grey-70 u-icon u-icon-circle u-icon-17"><img src="{% static 'orders/images/3015929-b6f9a7bb.png' %}" alt=""></span>
+               <h6 class="u-align-right u-hidden-sm u-hidden-xs u-text u-text-15" style=" font-size: 15px; font-family: Cairo; "><a href="{% url 'design' %}" > تصميم </a></h6>
+              </a>
+            </div>
+          </div>
+          <div class="u-align-center u-container-align-right-lg u-container-align-right-md u-container-align-right-xl u-container-style u-expanded-width u-grey-5 u-group u-radius-10 u-shape-round u-group-12">
+            <div id="bb" class="u-container-layout u-container-layout-14">
+              <a href="{% url 'settings' %}">
+               <span class="u-align-center-sm u-align-center-xs u-align-right-lg u-align-right-md u-align-right-xl u-file-icon u-grey-70 u-icon u-icon-circle u-icon-18"><img src="{% static 'orders/images/9780374-42f3009c.png' %}" alt=""></span>
+               <h6 class="u-align-right u-hidden-sm u-hidden-xs u-text u-text-default u-text-16" style=" font-size: 15px; font-family: Cairo; "><a href="{% url 'settings' %}" >  إعدادات</a></h6>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="custom-expanded data-layout-selected u-clearfix u-grey-5 u-layout-wrap u-layout-wrap-2">
+        <div class="u-layout">
+
+
+          <div class="u-layout-col">
+            <div class="u-container-style u-grey-10 u-layout-cell u-size-60 u-layout-cell-3">
+              <div class="u-container-layout u-container-layout-15">
+                <h6 class="u-text u-text-default u-text-17" style="  font-family: Cairo; ">حالة الطلب</h6>
+                <h6 class="u-text u-text-default u-text-18" style=" font-family: Cairo; ">رقم الهاتف</h6>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <p class="u-align-right-lg u-align-right-xl u-text u-text-default u-text-19" style=" font-family: Cairo; ">المنتج</p>
+                <p class="u-hidden-sm u-hidden-xs u-text u-text-default u-text-20" style="  font-family: Cairo; ">العميل</p>
+                <h6 class="u-hidden-md u-hidden-sm u-hidden-xs u-text u-text-default u-text-21" style="  font-family: Cairo; ">الولاية</h6>
+                <h6 class="u-text u-text-default u-text-22" style=" font-family: Cairo; ">المجموع</h6>
+                <h6 class="u-hidden-lg u-hidden-md u-hidden-sm u-hidden-xs u-text u-text-default u-text-23" style="  font-family: Cairo; ">تاريخ الطلب</h6><span class="u-icon u-icon-19"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 42 42" style=""><use xlink:href="#svg-e480"></use></svg><svg class="u-svg-content" viewBox="0 0 42 42" x="0px" y="0px" id="svg-e480" style="enable-background:new 0 0 42 42;"><polygon points="42,19 23,19 23,0 19,0 19,19 0,19 0,23 19,23 19,42 23,42 23,23 42,23 "></polygon></svg></span>
+            
+           
+            
+            
+            
+            
+            
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% for i in page.object_list %} 
+
+      <div class="custom-expanded data-layout-selected u-clearfix u-grey-5 u-gutter-0 u-layout-wrap u-layout-wrap-3">
+        <div class="u-layout">
+
+          
+          <div class="u-layout-col">
+            <div class="u-container-style u-layout-cell u-size-60 u-layout-cell-4">
+              <div class="u-container-layout u-valign-bottom-xl u-container-layout-16">
+                <img class="custom-expanded u-image u-image-circle u-image-1" src="{% static 'orders/images/fgfg-min.jpg' %}" alt="" data-image-width="1920" data-image-height="1003">
+                <p class="u-text u-text-default u-text-24">{{i.prix}} DA</p>
+                <p class="u-hidden-md u-hidden-sm u-hidden-xs u-text u-text-default u-text-25">{{i.wilayaa}}</p>
+                <p class="u-hidden-lg u-hidden-md u-hidden-sm u-hidden-xs u-text u-text-default u-text-26">2024/00/00</p>
+                <p class="u-text u-text-default u-text-27">{% if payment.numberpayments == 0 and payment.numbercemande == 0 %} 0******** {% else %} {{ i.phone_number }} {% endif %}</p>
+                <p class="u-hidden-sm u-hidden-xs u-text u-text-default u-text-28">{{i.nom_et_Prenom}}</p><span class="u-file-icon u-icon u-icon-20"><img src="{% static 'orders/images/4511541.png' %}" alt=""></span><span class="u-file-icon u-icon u-icon-21">{% if i.status and i.status.icon %} <img src="{{ i.status.icon.url }}" alt=""> {% else %} <img src="{% static 'orders/images/10529239.png' %}" alt=""> {% endif %}</span>
+                <div class="custom-expanded u-accordion u-align-center u-collapsed-by-default u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-spacing-2 u-accordion-1">
+                  <div class="u-accordion-item u-accordion-item-1">
+                    <a class="u-accordion-link u-active-palette-3-base u-btn-round u-button-style u-grey-5 u-hover-palette-3-base u-radius u-text-active-white u-text-grey-50 u-text-hover-white u-accordion-link-1" id="link-accordion-7c0e" aria-controls="accordion-7c0e" aria-selected="false">
+                      <span class="u-accordion-link-text" style="  font-family: Cairo; font-size: 15px;">المزيد من التفاصيل</span><span class="u-accordion-link-icon u-active-palette-3-base u-hover-palette-3-base u-icon u-icon-circle u-text-active-white u-text-grey-70 u-text-hover-white u-icon-22"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 426.66667 426.66667" style=""><use xlink:href="#svg-1cc3"></use></svg><svg class="u-svg-content" viewBox="0 0 426.66667 426.66667" id="svg-1cc3"><path d="m405.332031 192h-170.664062v-170.667969c0-11.773437-9.558594-21.332031-21.335938-21.332031-11.773437 0-21.332031 9.558594-21.332031 21.332031v170.667969h-170.667969c-11.773437 0-21.332031 9.558594-21.332031 21.332031 0 11.777344 9.558594 21.335938 21.332031 21.335938h170.667969v170.664062c0 11.777344 9.558594 21.335938 21.332031 21.335938 11.777344 0 21.335938-9.558594 21.335938-21.335938v-170.664062h170.664062c11.777344 0 21.335938-9.558594 21.335938-21.335938 0-11.773437-9.558594-21.332031-21.335938-21.332031zm0 0"></path></svg></span>
+                    </a>
+                    <div class="u-accordion-pane u-container-style u-white u-accordion-pane-1" id="accordion-7c0e" aria-labelledby="link-accordion-7c0e">
+                      <div class="u-container-layout u-container-layout-17">
+                        <div class="u-border-1 u-border-grey-75 u-container-align-center-xs u-container-style u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-shape-rectangle u-group-13">
+                          <div class="u-container-layout u-container-layout-18">
+                            <p class="u-align-center-xs u-align-right-lg u-align-right-md u-align-right-sm u-align-right-xl u-text u-text-default u-text-29" style=" font-size: 15px; font-family: Cairo; ">{{i.product}}</p>
+                            <p class="u-align-center-xs u-align-right-lg u-align-right-md u-align-right-sm u-align-right-xl u-text u-text-30" style=" font-size: 15px; font-family: Cairo; ">إسم المنتج</p>
+                          </div>
+                        </div>
+                        <div class="custom-expanded u-border-1 u-border-grey-75 u-container-style u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-group u-shape-rectangle u-group-14">
+                          <div class="u-container-layout u-valign-middle-xs u-container-layout-19">
+                            <p class="u-align-left-xs u-align-right-lg u-align-right-md u-align-right-sm u-align-right-xl u-text u-text-default u-text-31">{{i.phone_number}}</p>
+                            <p class="u-align-right u-text u-text-32" style=" font-size: 15px; font-family: Cairo; ">رقم الهاتف</p>
+                          </div>
+                        </div>
+                        <div class="custom-expanded u-border-1 u-border-grey-75 u-container-style u-expanded-width-xl u-group u-shape-rectangle u-group-15">
+                          <div class="u-container-layout u-container-layout-20">
+                            <p class="u-align-center-xs u-align-right-lg u-align-right-md u-align-right-sm u-align-right-xl u-text u-text-default u-text-33">{{i.nom_et_Prenom}}</p>
+                            <p class="u-align-right u-text u-text-34" style="font-size: 15px;  font-family: Cairo; ">العميل</p>
+                          </div>
+                        </div>
+                        <div class="u-border-1 u-border-grey-75 u-container-style u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-shape-rectangle u-group-16">
+                          <div class="u-container-layout u-valign-middle-xs u-container-layout-21">
+                            <p class="u-align-left-xs u-align-right-lg u-align-right-md u-align-right-sm u-align-right-xl u-text u-text-default u-text-35">{{i.wilayaa}}</p>
+                            <p class="u-align-right u-text u-text-36" style=" font-size: 15px; font-family: Cairo; ">الولاية</p>
+                          </div>
+                        </div>
+                        <div class="u-border-1 u-border-grey-75 u-container-style u-expanded-width u-group u-shape-rectangle u-group-17">
+                          <div class="u-container-layout u-valign-middle-xs u-container-layout-22">
+                            <p class="u-align-left-xs u-align-right-lg u-align-right-md u-align-right-sm u-align-right-xl u-text u-text-default u-text-37">{{i.prix}} DA</p>
+                            <p class="u-align-right u-text u-text-38" style=" font-size: 15px; font-family: Cairo; ">المجموع</p>
+                          </div>
+                        </div>
+                        <div class="u-border-1 u-border-grey-75 u-container-style u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-shape-rectangle u-group-18">
+                          <div class="u-container-layout u-valign-middle-xs u-container-layout-23">
+                            <p class="u-align-left-xs u-align-right-lg u-align-right-md u-align-right-sm u-align-right-xl u-text u-text-default u-text-39">{% if i.status  %} {{i.status}}   {% else %} طلب جديد {% endif %} </p>
+                            <p class="u-align-right u-text u-text-40" style=" font-size: 15px; font-family: Cairo; ">حالة الطلب</p>
+                          </div>
+                        </div>
+                        <div class="custom-expanded u-border-1 u-border-grey-75 u-container-style u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-group u-shape-rectangle u-group-19">
+                          <div class="u-container-layout u-valign-middle-xs u-container-layout-24">
+                            <p class="u-align-left-xs u-align-right-lg u-align-right-md u-align-right-sm u-align-right-xl u-text u-text-default u-text-41">2024/00/00</p>
+                            <p class="u-align-right u-text u-text-42" style=" font-size: 15px; font-family: Cairo; ">تاريخ الطلب</p>
+                          </div>
+                        </div>
+                        <div class="u-border-1 u-border-grey-75 u-container-align-center-xs u-container-style u-expanded-width u-group u-shape-rectangle u-group-20">
+                          <div class="u-container-layout u-container-layout-25">
+                            <p class="u-align-center-xs u-align-right-lg u-align-right-md u-align-right-sm u-align-right-xl u-text u-text-default u-text-43">MASSINISSA</p>
+                            <p class="u-align-center-xs u-align-right-lg u-align-right-md u-align-right-sm u-align-right-xl u-text u-text-44" style=" font-size: 15px; font-family: Cairo; ">العنوان</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+
+  
+
+
+
+        
+      <div class="pa" style=" margin: 0 auto; /* اجعل العنصر في المنتصف أفقياً */ width: 300px; ">
+        <p class="pag" >page:{{page.number}}/{{page.paginator.num_pages}}</p>  
+      <div class="center">
+        <div class="pagination">
+         {% if page.has_previous %}
+        <a href="{% url 'orders' %}?page={{page.previous_page_number }}">&laquo;</a>
+         {% endif %}
+
+
+         {% for num_page in page.paginator.page_range %}
+         {% if page.number == num_page %}
+        
+        <a href="{% url 'orders' %}?page={{num_page }}" class="active">{{num_page}}</a>
+        {% else %}
+        <a href="{% url 'orders' %}?page={{num_page }}" >{{num_page}}</a>
+
+
+
+        {% endif %}
+        {% endfor %}
+
+
+
+
+
+
+
+        {% if page.has_next %} 
+        <a href="{% url 'orders' %}?page={{page.next_page_number }}">&raquo;</a>
+        {% endif %}
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    </section>
+    
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-7f56"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-align-center u-small-text u-text u-text-variant u-text-1" style="  font-family: Cairo; "> ©&nbsp;sahla dz&nbsp;جميع الحقوق محفوظة&nbsp;</p>
+      </div></footer>
+ 
+  
+</body></html>
+{% else %}
+
+{% endif %}

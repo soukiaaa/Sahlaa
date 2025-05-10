@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Text Billboard with LED Lights</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #form-container {
+            margin-bottom: 20px;
+        }
+        #text-input {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        #generate-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #canvas-container {
+            width: 100%;
+            height: 70vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="form-container">
+        <input type="text" id="text-input" placeholder="أدخل النص هنا">
+        <button id="generate-btn">حول النص إلى لوحة إعلانية 3D</button>
+    </div>
+    <div id="canvas-container"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        document.getElementById('generate-btn').addEventListener('click', () => {
+            const text = document.getElementById('text-input').value;
+            generate3DBillboard(text);
+        });
+
+        function generate3DBillboard(text) {
+            const canvasContainer = document.getElementById('canvas-container');
+            canvasContainer.innerHTML = ''; // Clear previous canvas
+
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, canvasContainer.clientWidth / canvasContainer.clientHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(canvasContainer.clientWidth, canvasContainer.clientHeight);
+            canvasContainer.appendChild(renderer.domElement);
+
+            // Ambient light for general illumination
+            const ambientLight = new THREE.AmbientLight(0x404040); // Soft white light
+            scene.add(ambientLight);
+
+            // Directional light for additional illumination
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+            directionalLight.position.set(1, 1, 1).normalize();
+            scene.add(directionalLight);
+
+            // Load font for text geometry
+            const loader = new THREE.FontLoader();
+            loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', function (font) {
+                const geometry = new THREE.TextGeometry(text, {
+                    font: font,
+                    size: 1,
+                    height: 0.2,
+                    curveSegments: 12,
+                    bevelEnabled: true,
+                    bevelThickness: 0.03,
+                    bevelSize: 0.02,
+                    bevelOffset: 0,
+                    bevelSegments: 5
+                });
+                geometry.computeBoundingBox();
+                geometry.computeVertexNormals();
+
+                // Material for the text
+                const material = new THREE.MeshPhongMaterial({ 
+                    color: 0x0077ff, 
+                    specular: 0xffffff, 
+                    shininess: 100, 
+                    transparent: true, 
+                    opacity: 0.5,
+                    emissive: 0xffffff, // Emissive color for the LED effect
+                    emissiveIntensity: 0.5
+                });
+                const textMesh = new THREE.Mesh(geometry, material);
+                scene.add(textMesh);
+
+                // Position the text mesh in the center
+                textMesh.position.set(-0.5 * (geometry.boundingBox.max.x - geometry.boundingBox.min.x), 0, 0);
+
+                // Add point lights inside the text for LED effect
+                for (let i = 0; i < text.length; i++) {
+                    const pointLight = new THREE.PointLight(0xffffff, 1, 10);
+                    pointLight.position.set(
+                        textMesh.position.x + i * 1.5, // Position each light inside each letter
+                        textMesh.position.y,
+                        textMesh.position.z
+                    );
+                    scene.add(pointLight);
+                }
+
+                // Set camera position
+                camera.position.z = 5;
+
+                // Animation loop
+                const animate = function () {
+                    requestAnimationFrame(animate);
+                    textMesh.rotation.y += 0.01; // Rotate text
+                    renderer.render(scene, camera);
+                };
+                animate();
+            });
+        }
+    </script>
+</body>
+</html>

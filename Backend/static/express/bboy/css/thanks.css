@@ -1,0 +1,78 @@
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+.product__thku {
+    padding: 30px 0;
+}
+.wrap {
+    max-width: 1130px;
+    padding: 0 15px;
+    margin: auto;
+}
+.product__tkcn {
+    max-width: 600px;
+    margin: auto;
+	font-family: cairo;
+}
+div {
+    display: block;
+}
+.cntx p:not(:last-child), .cntx ul:not(:last-child), .cntx ol:not(:last-child) {
+    margin-bottom: 10px;
+}
+.cntx p, .cntx ul, .cntx ol {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    word-break: break-word;
+}
+.cntx p img:not(.emojione), .cntx ul img:not(.emojione), .cntx ol img:not(.emojione) {
+    max-width: 100%;
+    height: auto;
+    margin: 5px auto;
+    display: block;
+}
+.cntx p:not(:last-child), .cntx ul:not(:last-child), .cntx ol:not(:last-child) {
+    margin-bottom: 10px;
+}
+.cntx p, .cntx ul, .cntx ol {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    word-break: break-word;
+}
+style attribute {
+    text-align: center;
+}
+.cntx p, .cntx ul, .cntx ol {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    word-break: break-word;
+}
+.cntx p img:not(.emojione), .cntx ul img:not(.emojione), .cntx ol img:not(.emojione) {
+    max-width: 100%;
+    height: auto;
+    margin: 5px auto;
+    display: block;
+}
+.emojione {
+	float: right;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: inherit;
+    height: 1em;
+    width: 1em;
+    min-width: 20px;
+    min-height: 20px;
+    line-height: 1;
+    margin: -0.1em 0.1em 0.1em;
+}

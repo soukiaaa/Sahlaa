@@ -1,0 +1,17 @@
+#logoadmin{
+    width: 84px;
+    height: 31px;
+    margin: 7px auto 0 0;
+    border: none;
+  }
+  #header {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    color: var(--header-color);
+    overflow: hidden;
+    background-color: #f9b200;
+}  

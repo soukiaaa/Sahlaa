@@ -1,0 +1,831 @@
+{% load crispy_forms_tags %}
+   
+{% load static %}
+
+
+
+
+
+
+{% if request.user.is_authenticated %}
+
+
+
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="ar-DZ"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Contact Us">
+	<meta property="og:description" content="sahladz, sahla dz, ساهلة ديزاد, منصة للمتاجر الإلكترونية, إنشاء متجر إلكتروني في الجزائر, فتح متجر إلكتروني بسهولة, بيع المنتجات عبر الإنترنت في الجزائر, متاجر إلكترونية جزائرية, خدمات التجارة الإلكترونية في الجزائر, أفضل منصات المتاجر الإلكترونية, تصميم متجر إلكتروني مجاني, دليل إنشاء متجر إلكتروني, إدارة متاجر إلكترونية بسهولة, كيفية إنشاء متجر إلكتروني للمبتدئين, خدمات دفع إلكتروني في الجزائر, استضافة متاجر إلكترونية, تسويق متاجر إلكترونية في الجزائر, إطلاق متجر إلكتروني بميزانية منخفضة, توصيل الطلبات عبر المتاجر الإلكترونية, تحليل أداء المتاجر الإلكترونية, تجارة إلكترونية في الجزائر, طرق الدفع الإلكتروني, خدمات الشحن والتوصيل, بناء متجر إلكتروني ناجح, متاجر رقمية">
+
+
+
+	<meta name="description" content="sahladz, sahla dz, ساهلة ديزاد, منصة للمتاجر الإلكترونية, إنشاء متجر إلكتروني في الجزائر, فتح متجر إلكتروني بسهولة, بيع المنتجات عبر الإنترنت في الجزائر, متاجر إلكترونية جزائرية, خدمات التجارة الإلكترونية في الجزائر, أفضل منصات المتاجر الإلكترونية, تصميم متجر إلكتروني مجاني, دليل إنشاء متجر إلكتروني, إدارة متاجر إلكترونية بسهولة, كيفية إنشاء متجر إلكتروني للمبتدئين, خدمات دفع إلكتروني في الجزائر, استضافة متاجر إلكترونية, تسويق متاجر إلكترونية في الجزائر, إطلاق متجر إلكتروني بميزانية منخفضة, توصيل الطلبات عبر المتاجر الإلكترونية, تحليل أداء المتاجر الإلكترونية, تجارة إلكترونية في الجزائر, طرق الدفع الإلكتروني, خدمات الشحن والتوصيل, بناء متجر إلكتروني ناجح, متاجر رقمية">
+   
+  
+
+
+
+
+
+
+
+
+
+
+    <title>شحن المتجر الالكتروني</title>
+
+    <link rel="stylesheet" href="{% static 'payment/payment2/css/nicepage.css' %}" media="screen">
+<link rel="stylesheet" href="{% static 'payment/payment2/css/payment-2025-02.css' %}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static 'payment/payment2/js/jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'payment/payment2/js/nicepage.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'payment/payment2/js/payment2.js' %}" defer=""></script>
+    <meta name="generator" content="Nicepage 7.2.3, nicepage.com">
+    <meta name="referrer" content="origin">
+    
+    <link rel="icon" href="images/favicon.png">
+    
+    
+    
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "sahladz",
+		"logo": "images/logosahladzandboost2.png",
+		"sameAs": [
+				"https://linkedin.com/name",
+				"https://facebook.com/name",
+				"https://twitter.com/name",
+				"https://instagram.com/name",
+				"https://pinterest.com/name"
+		]
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="payment-2025-02">
+    <meta name="twitter:description" content="sahladz">
+    <meta property="og:title" content="payment-2025-02">
+    
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body data-path-to-root="./" data-include-products="true" class="u-body u-xl-mode" data-lang="ar" style=" font-family: Cairo; "><header class="u-clearfix u-grey-5 u-header u-header" id="sec-df96"><div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-sheet-1">
+        <a href="#" class="u-image u-logo u-image-1" data-image-width="668" data-image-height="252">
+          <img src="{% static 'payment/payment2/images/logosahladzandboost2.png' %}" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-align-right-xs u-menu u-menu-one-level u-offcanvas u-menu-1">
+          <div class="menu-collapse">
+            <a class="u-button-style u-hamburger-link u-nav-link" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#svg-a5e8"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="svg-a5e8" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-unstyled"><li class="u-nav-item"><a class="u-button-style u-nav-link" style="padding: 10px 19px;"  href="/">المتجر</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" style="padding: 10px 19px;" href="{% url 'dashboard' %}">الرئيسية</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link"  style="padding: 10px 19px;" href="{% url 'user' %}">المستخدم</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" style="padding: 10px 19px;" href="{% url 'orders' %}">الطلبيات</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" style="padding: 10px 19px;" href="{% url 'addproduct' %}">إظافة</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" style="padding: 10px 19px;" href="{% url 'products' %}">المنتجات</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" style="padding: 10px 19px;" href="{% url 'pixel' %}">البكسل</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" style="padding: 10px 19px;" href="{% url 'subscriptions' %}">شحن</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" style="padding: 10px 19px;" href="{% url 'design' %}">تصميم</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" style="padding: 10px 19px;"href="{% url 'settings' %}>إعدادات</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link"  href="/">المتجر</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'dashboard' %}">الرئيسية</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'user' %}">المستخدم</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'orders' %}">الطلبيات</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'addproduct' %}">إظافة</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'products' %}">المنتجات</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'pixel' %}">البكسل</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'subscriptions' %}">شحن</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'design' %}">تصميم</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'settings' %}>إعدادات</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-clearfix u-valign-top-xs u-section-1" id="sec-187f">
+      
+      
+      
+      
+      
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <div class="custom-expanded u-container-style u-grey-5 u-group u-radius u-group-2">
+              <div class="u-container-layout u-container-layout-2">
+                <a href="{% url 'logout_view' %}" >
+                <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-1" src="{% static 'payment/payment2/images/149698.png' %}" alt="" data-image-width="128" data-image-height="128">
+              </a>
+
+                <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-2" src="{% static 'payment/payment2/images/6541274.png' %}" alt="" data-image-width="128" data-image-height="128">
+
+                <p class="u-text u-text-default u-text-2">user: &nbsp;{{request.user.username}}&nbsp;</p>
+
+
+
+                <p class="u-align-center u-text u-text-1" style="direction: rtl; ">
+                  <!-- عرض رسالة الخطأ إذا كانت موجودة -->
+                  {% if error %}
+                  <div style="background-color: #f8d7da; color: #721c24; padding: 15px; margin: 20px 0; border: 1px solid #f5c6cb; border-radius: 4px; text-align: center;">
+                    {{ error }}
+                  </div>
+                  {% endif %}
+                
+                  <!-- عرض تفاصيل الباقة النشطة -->
+                  {% if active_payment %}
+                    {% if active_payment.type == "free" %}
+                    <!-- حالة الباقة المجانية -->
+                    لديك باقة <strong>مجانية</strong> وعدد الطلبيات المتبقية: 
+                    <strong>{{ active_payment.remaining_orders }}</strong>
+                    {% elif active_payment.type == "advanced" %}
+                    <!-- حالة الباقة المتطورة -->
+                    لديك باقة <strong>متطورة</strong> صالحة حتى تاريخ:
+                    <strong>{{ active_payment.end_date }}</strong>
+                    {% elif active_payment.type == "legendary" %}
+                    <!-- حالة الباقة الأسطورية -->
+                    لديك باقة <strong>أسطورية</strong> صالحة حتى تاريخ:
+                    <strong>{{ active_payment.end_date }}</strong>
+                    {% endif %}
+                  {% else %}
+                  <!-- لا توجد باقة نشطة -->
+
+                  <div style="text-align: center; margin-top: 0px;">
+                    <div style="display: inline-block; background-color: #f8d7da; color: #721c24; padding: 15px; border: 1px solid #f5c6cb; border-radius: 4px; text-align: center; width: auto; box-sizing: border-box;">
+                      حسابك غير نشط. يرجى شحن الحساب للاستفادة من العروض.
+                    </div>
+                  </div>
+                  
+                  
+
+
+
+
+                  {% endif %}
+
+
+
+
+
+                </p>
+
+
+
+
+
+
+              </div>
+            </div>
+            <div class="custom-expanded u-container-style u-grey-5 u-group u-group-3">
+              <div class="u-container-layout u-container-layout-3">
+                <div class="u-form u-form-1">
+
+<!-- form
+
+                  <form action="https://forms.nicepagesrv.com/v2/form/process" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form-1" style="padding: 10px;">
+                    <div class="u-form-group u-form-radiobutton u-form-group-1">
+                      <label class="u-label" style=" font-family: Cairo; ">الباقة</label>
+                      <div class="u-form-radio-button-wrapper" style=" font-size: 12px; font-family: Cairo; ">
+                        <div class="u-input-row">
+                          <input id="field-9fd0" type="radio" name="radiobutton" value="المجانية" class="u-field-input" checked="checked" data-calc="">
+                          <label class="u-field-label">المجانية</label>
+                        </div>
+                        <div class="u-input-row">
+                          <input id="field-6cd5" type="radio" name="radiobutton" value="المتطورة" class="u-field-input" data-calc="">
+                          <label class="u-field-label">المتطورة</label>
+                        </div>
+                        <div class="u-input-row">
+                          <input id="field-e022" type="radio" name="radiobutton" value="الأسطورية" class="u-field-input" data-calc="">
+                          <label class="u-field-label">الأسطورية</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="u-border-1 u-border-grey-dark-1 u-form-group u-form-line u-line u-line-horizontal u-line-1"></div>
+                    <div class="u-form-group u-form-number u-form-number-layout-number u-form-group-3">
+                      <label class="u-label" style="  font-family: Cairo; ">عدد طلبيات</label>
+                      <div class="u-input-row" data-value="0">
+                        <input value="0" type="number" placeholder="" id="number-31e2" name="number" class="u-input u-number">
+                      </div>
+                    </div>
+                    <div class="u-border-1 u-border-grey-dark-1 u-form-group u-form-line u-line u-line-horizontal u-line-2"></div>
+                    <p class="u-align-right u-form-group u-form-text u-text u-text-3"style="  font-family: Cairo; ">سعر الطلبية 10 دج</p>
+                    <div class="u-form-group u-form-select u-form-group-6">
+                      <label class="u-label" style="  font-family: Cairo; ">نوع الدفع</label>
+                      <div class="u-form-select-wrapper">
+                        <select id="select-7a58" name="select" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
+                          <option value="Item 1">Item 1</option>
+                          <option value="Item 2">Item 2</option>
+                          <option value="Item 3">Item 3</option>
+                        </select>
+                        <svg class="u-caret u-caret-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" style="fill:currentColor;" xml:space="preserve"><polygon class="st0" points="8,12 2,4 14,4 "></polygon></svg>
+                      </div>
+                    </div>
+                    <div class="u-form-group u-form-group-7">
+                      <label class="u-label" style="  font-family: Cairo; ">رفع الوصل</label>
+                      <input type="text" placeholder="" id="text-6b7e" name="text" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
+                    </div>
+                    <p class="u-align-right u-form-group u-form-text u-text u-text-4" style="  font-family: Cairo; "> المجموع </p>
+                    <div class="u-border-1 u-border-grey-dark-1 u-form-group u-form-line u-line u-line-horizontal u-line-3"></div>
+                    <p class="u-align-right u-form-group u-form-text u-text u-text-5"> دج 5000</p>
+                    <div class="u-align-left u-form-group u-form-submit">
+                      <a href="#" class="u-border-none u-btn u-btn-submit u-button-style u-palette-3-base u-btn-1"style="  font-family: Cairo; ">شحن</a>
+                      <input type="submit" value="submit" class="u-form-control-hidden">
+                    </div>
+                    <div class="u-form-send-message u-form-send-success" style="  font-family: Cairo; "> Merci ! Votre message a été envoyé. </div>
+                    <div class="u-form-send-error u-form-send-message"> Impossible d'envoyer votre message. Merci de corriger les erreurs et réessayer. </div>
+                    <input type="hidden" value="" name="recaptchaResponse" style="  font-family: Cairo; ">
+                    <input type="hidden" name="formServices" value="c270deca9879bb5930bd1acd06a29a95">
+                  </form>
+
+ -->
+
+<!-- form
+ <form action="" method="post">
+  {% csrf_token %}
+  {{ form }}
+  <input type="submit" value="Submit">
+</form>
+
+-->
+
+
+
+
+<style>
+
+
+  /* تصميم القائمة المنسدلة */
+  select {
+    font-family: Cairo;
+    font-size: 14px;
+    width: 100%; /* عرض القائمة بالكامل */
+    padding: 10px; /* مساحة داخلية */
+    border: 1px solid #ccc; /* حدود خفيفة */
+    border-radius: 8px; /* زوايا مستديرة */
+    background-color: #f9f9f9; /* لون الخلفية */
+    color: #333; /* لون النص */
+  
+    text-align: right; /* محاذاة النص لليمين */
+    direction: rtl; /* لضمان ظهور النصوص بشكل صحيح بالعربية */
+  }
+
+  /* تأثير عند التركيز */
+  select:focus {
+    outline: none; /* إزالة الحدود الزرقاء */
+    border-color: #007bff; /* لون الحدود عند التركيز */
+    background-color: #fff; /* تغيير لون الخلفية عند التركيز */
+  }
+
+  /* لضمان وجود السهم الافتراضي */
+  select::-ms-expand {
+    display: block; /* السهم في متصفح إنترنت إكسبلورر */
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form dir='rtl' action="" method="post" style=" border: 1px solid #c0c0c0; background: #f9f9f9; border-radius: 10px; font-family: 'Arial', sans-serif; direction: rtl; max-width: 100%; box-sizing: border-box; padding: 10px; " enctype="multipart/form-data">
+  {% csrf_token %}
+
+
+
+<div class="u-form-group u-form-radiobutton u-form-group-1" style=" padding-left: 10px; ">
+
+  <label for="id_package" style=" font-family: Cairo; ">الباقة:</label>
+  
+
+
+<!-- غلاف أزرار الراديو -->
+<div class="u-form-radio-button-wrapper" style="display: flex; flex-wrap: wrap; gap: 15px; font-size: 12px; font-family: Cairo; align-items: center; justify-content: space-between;">
+  <!-- الخيار الأول -->
+  <div class="u-input-row" style="display: flex; align-items: center; gap: 5px;">
+    <input id="free" type="radio" name="package" value="free" class="u-field-input" checked>
+    <label for="free" class="u-field-label"> المجانية</label>
+  </div>
+
+  <!-- الخيار الثاني -->
+  <div class="u-input-row" style="display: flex; align-items: center; gap: 5px;">
+    <input id="advanced" type="radio" name="package" value="advanced" class="u-field-input">
+    <label for="advanced" class="u-field-label"> المتطورة</label>
+  </div>
+
+  <!-- الخيار الثالث -->
+  <div class="u-input-row" style="display: flex; align-items: center; gap: 5px;">
+    <input id="legendary" type="radio" name="package" value="legendary" class="u-field-input">
+    <label for="legendary" class="u-field-label"> الأسطورية</label>
+  </div>
+</div>
+
+<div class="u-border-1 u-border-grey-dark-1 u-form-group u-form-line u-line u-line-horizontal u-line-1" style="border-color: #dfdfdf"></div>
+
+
+
+
+
+
+
+<!-- 
+
+  <select name="package" id="id_package">
+    <option value="" selected="">---------</option>
+  
+    <option value="free">الباقة المجانية</option>
+  
+    <option value="advanced">الباقة المتطورة</option>
+  
+    <option value="legendary">الباقة الأسطورية</option>
+  
+  </select>
+-->
+</div>
+
+<div style="direction: rtl; font-family: Cairo; text-align: right; display: block; font-family: Cairo;">  </div>
+
+<label for="id_numbercemande" style="font-family: Cairo; text-align: right; display: block; margin-bottom: 10px;">عدد الطلبيات:</label>
+
+<div class="u-input-row" >
+  <input type="number" name="numbercemande" value="0" min="0" id="id_numbercemande" style=" border-radius: 3px; border: 1px solid #ccc; ">
+ 
+</div>
+
+
+<div class="u-border-1 u-border-grey-dark-1 u-form-group u-form-line u-line u-line-horizontal u-line-1" style="border-color: #dfdfdf"></div>
+
+<p class="u-align-right u-form-group u-form-text u-text u-text-3" style=" font-family: Cairo; ">سعر الطلبية <span id="prix"> {% for price in prices %} <span class="order-price">{{ price.order_price }}</span> {% endfor %} </span> دج</p>
+
+
+
+
+
+
+
+
+
+
+
+<label for="id_payment_type" style="padding-top: 10px; font-family: Cairo; text-align: right; display: block; margin-bottom: 10px; font-family: Cairo; color: #000000;">نوع الدفع:</label>
+<select name="payment_type" id="id_payment_type">
+  {% for bank in banks %}
+  <option value="{{ bank.id }}">{{ bank.bankname }}</option>
+  {% endfor %}
+</select>
+
+
+
+
+
+
+
+<label for="id_upload_receipt" style="padding-top: 10px; font-family: Cairo; text-align: right; display: block; margin-bottom: 10px; font-family: Cairo; color: #000000;">رفع الوصل:</label>
+<input required type="file" name="upload_receipt" id="id_upload_receipt" style=" font-family: Cairo; font-size: 14px; width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #f9f9f9; color: #333; text-align: right; direction: rtl; ">
+
+
+
+
+<p class="u-align-right u-form-group u-form-text u-text u-text-4" style="padding-top: 10px; font-family: Cairo; text-align: right; display: block; margin-bottom: 10px; font-family: Cairo; color: #000000;">المجموع</p>
+
+<p class="u-align-right u-form-group u-form-text u-text u-text-5"> 
+
+
+  <span id="prix_1" style="display: none;"> 
+    {% for price in prices %} 
+      <span class="order-price">{{ price.advanced_package }}</span> 
+    {% endfor %} 
+  </span>
+  <span id="prix_2" style="display: none;"> 
+    {% for price in prices %} 
+      <span class="order-price">{{ price.legendary_package }}</span> 
+    {% endfor %} 
+  </span>
+  <span id="prix_3" style="display: none;"> 
+    0 
+  </span>
+  دج
+</p>
+
+
+
+ 
+
+
+
+
+
+
+<input type="number" name="amount" step="0.01" id="id_amount" style=" visibility: hidden; ">
+
+  <input type="submit" value="شحن">
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+              </div>
+            </div>
+
+
+
+ 
+
+   
+
+
+
+
+
+
+
+
+            {% for bank in banks %}
+            <div class="u-container-style u-expanded-width-sm u-expanded-width-xs u-grey-5 u-group u-group-4" id="{{ bank.id }}"> 
+              <div class="u-container-layout u-valign-top-sm u-valign-top-xs u-container-layout-4">
+                <div class="u-border-1 u-border-grey-25 u-container-style u-expanded-width u-grey-5 u-group u-radius u-group-5" style="background-color: #f9f9f9;">
+                  <div class="u-container-layout u-valign-middle-sm u-valign-middle-xs u-container-layout-5">
+                    <img class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-align-left-xl u-image u-image-circle u-image-3" src="{{ bank.logobank.url }}" alt="" data-image-width="1400" data-image-height="1095">
+                    <p class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-default u-text-6">{{ bank.nameandsurname }}</p>
+                    <p class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-text u-text-default u-text-7">
+                      {% if bank.accountnumber %} 
+                        {{ bank.accountnumber }} 
+                      {% elif bank.email %} 
+                        {{ bank.email }} 
+                      {% else %} 
+                        غير متوفر حاليا 
+                      {% endif %}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+        </div>
+        <div class="u-hidden-sm u-hidden-xs u-shape u-shape-rectangle u-white u-shape-1"></div>
+        <div class="custom-expanded u-container-style u-group u-hidden-sm u-hidden-xs u-palette-2-light-1 u-group-6">
+          <div class="u-container-layout u-container-layout-6">
+            <div class="u-container-align-right u-container-style u-expanded-width u-grey-80 u-group u-group-7">
+              <div class="u-container-layout u-container-layout-7">
+                <div class="infinite u-container-align-center u-container-style u-expanded-width u-grey-80 u-group u-group-8">
+                  <div class="u-container-layout u-container-layout-8">
+                    <div class="custom-expanded u-align-center u-container-style u-grey-25 u-group u-hover-feature u-radius-10 u-shape-round u-group-9">
+                      <div class="u-container-layout u-container-layout-9">
+                        <span class="u-align-right u-file-icon u-grey-70 u-icon u-icon-circle u-icon-1">
+                            <a href="/" style="text-decoration: none;">
+                               <img src="{% static 'payment/payment2/images/61125-b77a6ca2.png' %}" alt="">
+                            </a>
+
+                        </span>
+                        <h6 class="u-align-right u-text u-text-8" style=" font-family: Cairo; "><a href="/" >&nbsp;المتجر</a ></h6>
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius-10 u-shape-round u-group-10">
+                      <div class="u-container-layout u-container-layout-10">
+                        <span class="u-align-right u-file-icon u-grey-70 u-icon u-icon-circle u-icon-2">
+                         <a href="{% url 'dashboard' %}" style="text-decoration: none;">
+                               <img src="{% static 'payment/payment2/images/5729968-81445200.png' %}" alt="">
+                         </a> 
+                        </span>
+                        <h6 class="u-align-right u-hover-feature u-text u-text-9" style=" font-family: Cairo; "><a href="{% url 'dashboard' %}" >&nbsp;الرئيسية</a></h6>
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius u-shape-round u-group-11" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-11">
+                        <span class="u-align-right u-file-icon u-grey-70 u-icon u-icon-circle u-icon-3" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                            <a href="{% url 'user' %}" style="text-decoration: none;">
+                               <img src="{% static 'payment/payment2/images/6541274-ca440fba.png' %}" alt="">
+                            </a> 
+                        </span>
+                        <h6 class="u-align-right u-text u-text-10" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""style=" font-family: Cairo; "><a href="{% url 'user' %}" > المستخدم</a></h6>
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius u-shape-round u-group-12" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-12">
+                        <span class="u-align-right u-file-icon u-icon u-text-white u-icon-4">
+                            <a href="{% url 'orders' %}" style="text-decoration: none;">
+                              <img src="{% static 'payment/payment2/images/10377929-42ab18b0.png' %}" alt="">
+                            </a> 
+                        </span>
+                        <h6 class="u-align-right u-text u-text-11" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""style=" font-family: Cairo; "><a href="{% url 'orders' %}" > طلبيات</a></h6>
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius u-shape-round u-group-13" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-13">
+                        <span class="u-align-right u-file-icon u-grey-70 u-icon u-icon-circle u-icon-5">
+                            <a href="{% url 'addproduct' %}" style="text-decoration: none;">
+                               <img src="{% static 'payment/payment2/images/9882820-b67bfa30.png' %}" alt="">
+                            </a>
+                        </span>
+                        <h6 class="u-align-right u-text u-text-12" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""style=" font-family: Cairo; "><a href="{% url 'addproduct' %}" >إضافة&nbsp;</a></h6>
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius u-shape-round u-group-14" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-14">
+                        <span class="u-align-right u-file-icon u-grey-70 u-icon u-icon-circle u-icon-6">
+                            <a href="{% url 'products' %}" style="text-decoration: none;">
+                          <img src="{% static 'payment/payment2/images/10307827-52e8cff8.png' %}" alt="">
+                        </a>
+                        </span>
+                        <h6 class="u-align-right u-text u-text-13" style=" font-family: Cairo; "><a href="{% url 'products' %}" > المنتجات</a></h6>
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius u-shape-round u-group-15" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-15">
+                        <span class="u-align-right u-file-icon u-grey-70 u-icon u-icon-circle u-icon-7">
+                            <a href="{% url 'pixel' %}" style="text-decoration: none;">
+                          <img src="{% static 'payment/payment2/images/7067696-9f57c4d2.png' %}" alt="">
+                        </a>
+                        </span>
+                        <h6 class="u-align-right u-text u-text-14" style=" font-family: Cairo; "><a href="{% url 'pixel' %}" >&nbsp;بكسل</a></h6>
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius u-shape-round u-group-16" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-16">
+                        <span class="u-align-right u-file-icon u-icon u-text-white u-icon-8">
+                            <a href="{% url 'subscriptions' %}" style="text-decoration: none;">
+                          <img src="{% static 'payment/payment2/images/10179258-ced9957c.png' %}" alt="">
+                        </a>
+                        </span>
+                        <h6 class="u-align-right u-text u-text-15" style=" font-family: Cairo; "><a href="{% url 'subscriptions' %}" >شحن&nbsp;</a></h6>
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius u-shape-round u-group-17" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-17">
+                        <span class="u-align-right u-file-icon u-grey-70 u-icon u-icon-circle u-icon-9">
+                            <a href="{% url 'design' %}" style="text-decoration: none;">
+                          <img src="{% static 'payment/payment2/images/3015929-b6f9a7bb.png' %}" alt="">
+                        </a>
+                        </span>
+                        <h6 class="u-align-right u-text u-text-16" style=" font-family: Cairo; "><a href="{% url 'design' %}" >تصميم&nbsp;</a></h6>
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius u-shape-round u-group-18" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-18">
+                        <span class="u-align-right u-file-icon u-grey-70 u-icon u-icon-circle u-icon-10">
+                            <a href="{% url 'settings' %}" style="text-decoration: none;">
+                          <img src="{% static 'payment/payment2/images/9780374-42f3009c.png' %}" alt="">
+                        </a>
+                        </span>
+                        <h6 class="u-align-right u-text u-text-17" style=" font-family: Cairo; "><a href="{% url 'settings' %}" >  إعدادات</a></h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      
+      
+    </section>
+    
+    
+    
+    
+
+  
+</body></html>
+
+
+{% else %}
+
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="fr"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Contact Us">
+    <meta name="description" content="">
+    <title>À propos de</title> 
+    <link rel="stylesheet" href="{% static 'addproduct/nicepage.css' %}" media="screen">
+<link rel="stylesheet" href="{% static 'addproduct/À-propos-de.css' %}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static 'addproduct/jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'addproduct/nicepage.js' %}" defer=""></script>
+    <meta name="generator" content="Nicepage 5.2.0, nicepage.com">
+    <meta name="referrer" content="origin">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+
+
+
+
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="bboy/img/favicon.png">
+    <!-- CSS here -->
+        <link rel="stylesheet" href="{% static 'bboy/css/preloader.css' %}">
+        <link rel="stylesheet" href="{% static 'bboy/css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'bboy/css/meanmenu.css' %}">
+        <link rel="stylesheet" href="{% static 'bboy/css/animate.css' %}">
+        <link rel="stylesheet" href="{% static 'bboy/css/owl-carousel.css' %}">
+        <link rel="stylesheet" href="{% static 'bboy/css/swiper-bundle.css' %}">
+        <link rel="stylesheet" href="{% static 'bboy/css/backtotop.css' %}">
+        <link rel="stylesheet" href="{% static 'bboy/css/magnific-popup.css' %}">
+        <link rel="stylesheet" href="{% static 'bboy/css/nice-select.css' %}">
+        <link rel="stylesheet" href="{% static 'bboy/flaticon/flaticon.css' %}">
+        <link rel="stylesheet" href="{% static 'bboy/css/font-awesome-pro.css' %}">
+        <link rel="stylesheet" href="{% static 'bboy/css/default.css' %}">
+        <link rel="stylesheet" href="{% static 'bboy/css/style.css' %}">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "images/logosahlaSHOP.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="À propos de">
+    <meta property="og:type" content="website">
+  </head>
+
+  <body>
+    <header class="u-clearfix u-grey-75 u-header u-header" id="sec-df96"><div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1">
+      <a href="/" class="u-hidden-xs u-image u-logo u-image-1" data-image-width="668" data-image-height="254">
+        <img src="{% static 'dashboard_pge1/css/images/logosahlaSHOP.png' %}" class="u-logo-image u-logo-image-1">
+      </a>
+      <p class="u-text u-text-default u-text-1"> نعدكم بأفضل خدمة زبائن ، وأحسن الأسعار</p>
+    </div></header>
+      <div class="container">
+    
+          <div class="container-fluid col-xxl-8 px-4 py-5">
+              <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                  {% if messages %}
+                      <div class="container mt-3">
+                          <div class="messages">
+                              {% for message in messages %}
+                                  {% if message.tags %}
+                                  <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                                      {{ message }}
+                                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                  </div>
+                                  {% endif %}
+                              {% endfor %}
+                          </div>
+                      </div>
+                  {% endif %}
+  
+    
+                  <div class="col-10 col-sm-8 col-lg-6">
+  
+                      {% if request.user.is_authenticated %}
+                          <img src="{{ profile.avatar.url }}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                          width="700" height="500" loading="lazy">
+  
+                           
+                      {% else %}
+                          <img src="{% static 'serialstor/images/adsstor.png' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                          width="700" height="500" loading="lazy">
+                      {% endif %}
+                  </div>
+                  <div class="col-lg-6">
+                      {% if request.user.is_authenticated %}
+  
+                      
+                      {% endif %}
+                      <h1 class=" fw-bold lh-1 mb-3" style=" font-size: 1.6rem; font-family: Cairo; ">تسجيل دخول او فتح حساب جديد</h1>
+                      <p class="bio-para">
+                          {% if request.user.is_authenticated %} 
+                          
+                          {{ profile.bio }}
+                          
+                          {% else %}
+  
+                          &nbsp;
+  
+                          {% endif %}
+                      
+                      </p>
+                      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                          {% if not request.user.is_authenticated %}
+                              <a href="{% url 'register_view' %}"><button type="button" class="btn btn-primary btn-md px-4 me-md-2" style=" font-family: Cairo; ">إنشاء حساب </button></a>
+                              <a href="{%url 'login_view' %}"><button type="button" class="btn btn-success btn-md px-4 me-md-2" style=" font-family: Cairo; ">تسجيل دخول</button></a>
+                          {% else %}
+                              <a href="{% url 'logout_view' %}"><button type="button" class="btn btn-danger btn-md px-4 me-md-2">Logout</button></a>
+                          {% endif %}
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="b-example-divider"></div>
+  
+      </div>
+  
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+     
+  </body>
+  
+  
+  </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endif %}  

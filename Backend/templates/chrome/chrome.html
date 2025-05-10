@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحميل وتجربة الملف باستخدام ChromeDriver</title>
+    <style>
+        /* إعدادات الجسم والصفحة */
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding-top: 30px;
+        }
+
+        /* الحاوية الرئيسية */
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 950px;
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #444;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        /* تنسيق الفيديو */
+        video {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        /* زر تحميل الملف */
+        .download-btn {
+            display: block;
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        /* إدخال المسار */
+        .form-group {
+            margin-top: 30px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            margin-top: 10px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #007bff;
+        }
+
+        button[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+
+        /* أزرار تجريبية */
+        .test-btns {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .test-btns button {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            width: 45%;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .test-btns button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .close-btn {
+            background-color: #ff4c4c;
+        }
+
+        .close-btn:hover {
+            background-color: #e60000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <h1>تحميل وتجربة الملف باستخدام ChromeDriver</h1>
+      
+
+        <!-- عرض الفيديو من الرابط المخزن في قاعدة البيانات -->
+     
+
+        <iframe src="{{ video_url }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; height: 540px; border-radius: 10px;"></iframe>
+
+        <!-- زر لتحميل الملف -->
+        <div class="card">
+            <h2>تحميل الملف:</h2>
+            <a href="{{ file_url }}" class="download-btn" download target="_blank">
+                تحميل الملف
+            </a>
+            
+        </div>
+
+        <!-- حقل إدخال مسار الملف -->
+        <div class="form-group">
+            <h2>أدخل مسار الملف على سطح المكتب:</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <input type="text" name="desktop_file_path" placeholder="أدخل المسار هنا" value="{{ desktop_file_path }}">
+                <button type="submit">حفظ المسار</button>
+            </form>
+        </div>
+
+
+
+
+<!-- هنا وضع الزر لفتح المتصفح -->
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit" name="open_browser">فتح المتصفح باستخدام ChromeDriver</button>
+</form>
+
+
+
+
+
+        <!-- أزرار تجريبية -->
+        <div class="test-btns">
+            <button class="test-btn" name="open_browser">تجربة الملف باستخدام ChromeDriver</button>
+            <button class="close-btn" onclick="closeChrome()">غلق متصفح Chrome</button>
+        </div>
+    </div>
+
+    <script>
+        // دالة لاختبار فتح الملف باستخدام ChromeDriver
+        function testFile() {
+            alert("يتم الآن اختبار فتح الملف باستخدام ChromeDriver...");
+            // قم بإضافة الكود المناسب لاختبار ChromeDriver هنا
+        }
+
+        // دالة لغلق متصفح Chrome من مدير المهام
+        function closeChrome() {
+            alert("سيتم الآن غلق متصفح Chrome.");
+            // قم بإضافة الكود لغلق متصفح Chrome من مدير المهام هنا
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% for item in interface %}
+    <div class="card">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+        
+        <!-- زر التعديل -->
+        <a href="{% url 'update_designstore' my_id=item.id %}" class="btn btn-primary">✏️ تعديل</a>
+
+        <!-- زر الحذف -->
+        <a href="{% url 'delete_designstore' my_id=item.id %}" class="btn btn-danger" onclick="return confirm('هل أنت متأكد من الحذف؟');">🗑 حذف</a>
+    </div>
+{% endfor %}

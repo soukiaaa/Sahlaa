@@ -1,0 +1,411 @@
+
+{% load crispy_forms_tags %}
+   
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="ar-DZ"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Contact Us">
+
+	<meta property="og:description" content="sahladz, sahla dz, ساهلة ديزاد, منصة للمتاجر الإلكترونية, إنشاء متجر إلكتروني في الجزائر, فتح متجر إلكتروني بسهولة, بيع المنتجات عبر الإنترنت في الجزائر, متاجر إلكترونية جزائرية, خدمات التجارة الإلكترونية في الجزائر, أفضل منصات المتاجر الإلكترونية, تصميم متجر إلكتروني مجاني, دليل إنشاء متجر إلكتروني, إدارة متاجر إلكترونية بسهولة, كيفية إنشاء متجر إلكتروني للمبتدئين, خدمات دفع إلكتروني في الجزائر, استضافة متاجر إلكترونية, تسويق متاجر إلكترونية في الجزائر, إطلاق متجر إلكتروني بميزانية منخفضة, توصيل الطلبات عبر المتاجر الإلكترونية, تحليل أداء المتاجر الإلكترونية, تجارة إلكترونية في الجزائر, طرق الدفع الإلكتروني, خدمات الشحن والتوصيل, بناء متجر إلكتروني ناجح, متاجر رقمية">
+
+
+
+	<meta name="description" content="sahladz, sahla dz, ساهلة ديزاد, منصة للمتاجر الإلكترونية, إنشاء متجر إلكتروني في الجزائر, فتح متجر إلكتروني بسهولة, بيع المنتجات عبر الإنترنت في الجزائر, متاجر إلكترونية جزائرية, خدمات التجارة الإلكترونية في الجزائر, أفضل منصات المتاجر الإلكترونية, تصميم متجر إلكتروني مجاني, دليل إنشاء متجر إلكتروني, إدارة متاجر إلكترونية بسهولة, كيفية إنشاء متجر إلكتروني للمبتدئين, خدمات دفع إلكتروني في الجزائر, استضافة متاجر إلكترونية, تسويق متاجر إلكترونية في الجزائر, إطلاق متجر إلكتروني بميزانية منخفضة, توصيل الطلبات عبر المتاجر الإلكترونية, تحليل أداء المتاجر الإلكترونية, تجارة إلكترونية في الجزائر, طرق الدفع الإلكتروني, خدمات الشحن والتوصيل, بناء متجر إلكتروني ناجح, متاجر رقمية">
+   
+  
+
+
+
+
+
+
+
+
+
+    <title>لوحة التحكم المتجر الالكتروني</title>
+    <link rel="stylesheet" href="{% static 'dashboard/dashbord/css/nicepage.css' %}" media="screen">
+<link rel="stylesheet" href="{% static 'dashboard/dashbord/css/sahladz2024-4-555.css' %}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static 'dashboard/dashbord/js/jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'dashboard/dashbord/js/nicepage.js' %}" defer=""></script>
+    <meta name="generator" content="Nicepage 7.2.3, nicepage.com">
+    
+    <link rel="icon" href="{% static 'dashboard/dashbord/images/favicon.png' %}">
+    
+    
+    
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "sahladz",
+		"logo": "images/logosahladzandboost2.png",
+		"sameAs": [
+				"https://linkedin.com/name",
+				"https://facebook.com/name",
+				"https://twitter.com/name",
+				"https://instagram.com/name",
+				"https://pinterest.com/name"
+		]
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="sahladz2024-4-555">
+    <meta name="twitter:description" content="sahladz">
+    <meta property="og:title" content="sahladz2024-4-555">
+    
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="ar" style=" font-family: Cairo; "><header class="u-clearfix u-grey-5 u-header u-header" id="sec-df96"><div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-sheet-1">
+        <a href="#" class="u-image u-logo u-image-1" data-image-width="668" data-image-height="252">
+          <img src="{% static 'dashboard/dashbord/images/logosahladzandboost2.png' %}" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-align-right-xs u-menu u-menu-one-level u-offcanvas u-menu-1">
+          <div class="menu-collapse">
+            <a class="u-button-style u-hamburger-link u-nav-link" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#svg-a5e8"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="svg-a5e8" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+
+
+            <ul class="u-nav u-unstyled"><li class="u-nav-item"><a class="u-button-style u-nav-link" style="padding: 10px 19px;" href="/">المتجر</a>
+            </li><li class="u-nav-item"><a class="u-button-style u-nav-link" style="padding: 10px 19px;" href="{% url 'dashboard' %}">الرئيسية</a>
+            </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="#" style="padding: 10px 19px;" href="{% url 'user' %}">المستخدم</a>
+            </li><li class="u-nav-item"><a class="u-button-style u-nav-link" style="padding: 10px 19px;" href="{% url 'orders' %}">الطلبيات</a>
+            </li><li class="u-nav-item"><a class="u-button-style u-nav-link" style="padding: 10px 19px;" href="{% url 'addproduct' %}">إظافة</a>
+            </li><li class="u-nav-item"><a class="u-button-style u-nav-link" style="padding: 10px 19px;" href="{% url 'products' %}" >المنتجات</a>
+            </li><li class="u-nav-item"><a class="u-button-style u-nav-link" style="padding: 10px 19px;" href="{% url 'pixel' %}">البكسل</a>
+            </li><li class="u-nav-item"><a class="u-button-style u-nav-link" style="padding: 10px 19px;" href="{% url 'subscriptions' %}">شحن</a>
+            </li><li class="u-nav-item"><a class="u-button-style u-nav-link" style="padding: 10px 19px;" href="{% url 'design' %}">تصميم</a>
+            </li><li class="u-nav-item"><a class="u-button-style u-nav-link" style="padding: 10px 19px;" href="{% url 'settings' %}">إعدادات</a>
+            </li></ul>
+
+
+
+
+
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+
+
+
+
+
+
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/">المتجر</a>
+                </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'dashboard' %}">الرئيسية</a>
+                </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'user' %}">المستخدم</a>
+                </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'orders' %}">الطلبيات</a>
+                </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'addproduct' %}">إظافة</a>
+                </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'products' %}">المنتجات</a>
+                </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'pixel' %}">البكسل</a>
+                </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'subscriptions' %}">شحن</a>
+                </li><li class="u-nav-item"><a class="u-button-style u-nav-link"href="{% url 'design' %}">تصميم</a>
+                </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'settings' %}">إعدادات</a>
+                </li></ul>
+
+
+
+
+
+
+
+
+
+
+
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-clearfix u-valign-top-xs u-section-1" id="sec-187f">
+      
+      
+      
+      
+      
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-align-right u-container-align-right u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <div class="custom-expanded u-container-style u-grey-5 u-group u-radius u-group-2">
+              <div class="u-container-layout u-container-layout-2">
+                <a href="{% url 'logout_view' %}" >
+                  <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-1" src="{% static 'dashboard/dashbord/images/149698.png' %}" alt="" data-image-width="128" data-image-height="128">
+                </a>
+                 <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-2" src="{% static 'dashboard/dashbord/images/6541274.png' %}" alt="" data-image-width="128" data-image-height="128">
+                <p class="u-align-center-xs u-text u-text-default u-text-1"> user: &nbsp;{{request.user.username}}&nbsp;</p>
+
+
+                <p class="u-align-center u-text u-text-2" style="direction: rtl; ">
+                          <!-- عرض رسالة الخطأ إذا كانت موجودة -->
+                          {% if error %}
+                          <div style="background-color: #f8d7da; color: #721c24; padding: 15px; margin: 20px 0; border: 1px solid #f5c6cb; border-radius: 4px; text-align: center;">
+                            {{ error }}
+                          </div>
+                          {% endif %}
+                        
+                          <!-- عرض تفاصيل الباقة النشطة -->
+                          {% if active_payment %}
+                            {% if active_payment.type == "free" %}
+                            <!-- حالة الباقة المجانية -->
+                            لديك باقة <strong>مجانية</strong> وعدد الطلبيات المتبقية: 
+                            <strong>{{ active_payment.remaining_orders }}</strong>
+                            {% elif active_payment.type == "advanced" %}
+                            <!-- حالة الباقة المتطورة -->
+                            لديك باقة <strong>متطورة</strong> صالحة حتى تاريخ:
+                            <strong>{{ active_payment.end_date }}</strong>
+                            {% elif active_payment.type == "legendary" %}
+                            <!-- حالة الباقة الأسطورية -->
+                            لديك باقة <strong>أسطورية</strong> صالحة حتى تاريخ:
+                            <strong>{{ active_payment.end_date }}</strong>
+                            {% endif %}
+                          {% else %}
+                          <!-- لا توجد باقة نشطة -->
+        
+                          <div style="text-align: center; margin-top: 0px;">
+                            <div style="display: inline-block; background-color: #f8d7da; color: #721c24; padding: 15px; border: 1px solid #f5c6cb; border-radius: 4px; text-align: center; width: auto; box-sizing: border-box;">
+                              حسابك غير نشط. يرجى شحن الحساب للاستفادة من العروض.
+                            </div>
+                          </div>
+                          
+                          
+        
+        
+        
+        
+                          {% endif %}
+
+
+
+
+                </p>
+
+
+
+
+
+              </div>
+            </div>
+            <div class="custom-expanded data-layout-selected u-clearfix u-layout-wrap u-layout-wrap-1">
+
+
+
+
+              <div style="text-align: center; margin-top: 20px;">
+                <a href="https://t.me/+KOCb-2psv6JkMTQ0" target="_blank" style="display: inline-block; background-color: #0088cc; color: white; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-family: 'Cairo', sans-serif; font-size: 16px;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;">
+                    التحق بنا على تلغرام
+                </a>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+              <div class="u-layout">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-shape-rectangle u-size-20 u-layout-cell-1">
+                    <div class="u-container-layout u-valign-top-xl u-container-layout-3">
+                      <div class="custom-expanded u-align-center u-container-align-center u-container-style u-expanded-width-lg u-expanded-width-md u-expanded-width-xl u-gradient u-group u-radius u-group-3">
+                        <div class="u-container-layout u-container-layout-4">
+                          <span class="u-align-left u-file-icon u-icon u-icon-1">
+                            <img src="{% static 'dashboard/dashbord/images/10334964-08cbed4c.png' %}" alt="">
+                          </span>
+                          <p class="u-align-right u-text u-text-default u-text-white u-text-3">{{prodact_total}}</p>
+                          <p class="u-align-right u-text u-text-white u-text-4"> عدد المنتجات</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-shape-rectangle u-size-20 u-layout-cell-2">
+                    <div class="u-container-layout u-container-layout-5">
+                      <div class="u-container-style u-expanded-width-lg u-expanded-width-xl u-gradient u-group u-radius u-group-4">
+                        <div class="u-container-layout u-container-layout-6">
+                          <span class="u-align-center u-icon u-icon-circle u-text-white u-icon-2">
+                            <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 52 52" style=""><use xlink:href="#svg-430d"></use></svg>
+                            <svg class="u-svg-content" viewBox="0 0 52 52" x="0px" y="0px" id="svg-430d" style="enable-background:new 0 0 52 52;"><g><path d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M40.495,17.329l-16,18
+		C24.101,35.772,23.552,36,22.999,36c-0.439,0-0.88-0.144-1.249-0.438l-10-8c-0.862-0.689-1.002-1.948-0.312-2.811
+		c0.689-0.863,1.949-1.003,2.811-0.313l8.517,6.813l14.739-16.581c0.732-0.826,1.998-0.9,2.823-0.166
+		C41.154,15.239,41.229,16.503,40.495,17.329z"></path>
+</g></svg>
+                          </span>
+                          <p class="u-align-center-xl u-align-right-lg u-align-right-md u-align-right-sm u-align-right-xs u-text u-text-default u-text-white u-text-5">{{Liste_demandest}}</p>
+                          <p class="u-align-right u-text u-text-white u-text-6"> عدد الطلبيات</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="u-container-style u-layout-cell u-size-20 u-layout-cell-3">
+                    <div class="u-container-layout u-container-layout-7">
+                      <div class="u-align-center u-container-align-center u-container-style u-expanded-width-lg u-expanded-width-xl u-gradient u-group u-radius u-group-5">
+                        <div class="u-container-layout u-container-layout-8">
+                          <span class="u-align-left u-file-icon u-icon u-icon-3">
+                            <img src="{% static 'dashboard/dashbord/images/61584-4374af27.png' %}" alt="">
+                          </span>
+                          <p class="u-align-right u-text u-text-default u-text-white u-text-7">0</p>
+                          <p class="u-align-right u-text u-text-white u-text-8"> الرصيد</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-hidden-sm u-hidden-xs u-shape u-shape-rectangle u-white u-shape-1"></div>
+        <div class="custom-expanded u-container-style u-group u-hidden-sm u-hidden-xs u-palette-2-light-1 u-group-6" style=" position: fixed; top: 0; /* يمكنك تعديلها حسب الحاجة */ right: 0; ">
+          <div class="u-container-layout u-container-layout-9">
+            <div class="u-container-align-right u-container-style u-expanded-width u-grey-80 u-group u-group-7">
+              <div class="u-container-layout u-container-layout-10">
+                <div class="infinite u-container-style u-expanded-width u-grey-80 u-group u-group-8">
+                  <div class="u-container-layout u-container-layout-11">
+                    <div class="custom-expanded u-align-center u-container-align-center u-container-style u-grey-25 u-group u-hover-feature u-radius-10 u-shape-round u-group-9">
+                      <div class="u-container-layout u-container-layout-12">
+                        <span class="u-align-right u-file-icon u-grey-70 u-icon u-icon-circle u-icon-4">
+                          <img src="{% static 'dashboard/dashbord/images/61125-b77a6ca2.png' %}" alt="">
+                        </span>
+                        <h6 class="u-align-right u-text u-text-9" style=" font-family: Cairo; "><a href="/" >&nbsp;المتجر</a ></h6>
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius-10 u-shape-round u-group-10">
+                      <div class="u-container-layout u-container-layout-13">
+                        <span class="u-align-right u-file-icon u-grey-70 u-icon u-icon-circle u-icon-5">
+                          <a href="{% url 'dashboard' %}" style="text-decoration: none;">
+                          <img src="{% static 'dashboard/dashbord/images/5729968-81445200.png' %}" alt="">
+                        </a>
+                        </span>
+                        <h6 class="u-align-right u-hover-feature u-text u-text-10" style=" font-family: Cairo; "><a href="{% url 'dashboard' %}" >&nbsp;الرئيسية</a></h6>
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius u-shape-round u-group-11" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-14">
+                        <span class="u-align-right u-file-icon u-grey-70 u-icon u-icon-circle u-icon-6" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                          <a href="{% url 'user' %}" style="text-decoration: none;">
+                          <img src="{% static 'dashboard/dashbord/images/6541274-ca440fba.png' %}" alt="">
+                        </a>
+                        </span>
+                        <h6 class="u-align-right u-text u-text-11" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" style=" font-family: Cairo; "><a href="{% url 'user' %}" > المستخدم</a></h6>
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius u-shape-round u-group-12" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-15">
+                        <span class="u-align-right u-file-icon u-icon u-text-white u-icon-7">
+                          <a href="{% url 'orders' %}" style="text-decoration: none;">
+                          <img src="{% static 'dashboard/dashbord/images/10377929-42ab18b0.png' %}" alt="">
+                        </a>
+                        </span>
+                        <h6 class="u-align-right u-text u-text-12" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" style=" font-family: Cairo; "><a href="{% url 'orders' %}" > طلبيات</a></h6>
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius u-shape-round u-group-13" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-16">
+                        <span class="u-align-right u-file-icon u-grey-70 u-icon u-icon-circle u-icon-8">
+                          <a href="{% url 'addproduct' %}" style="text-decoration: none;">
+                          <img src="{% static 'dashboard/dashbord/images/9882820-b67bfa30.png' %}" alt="">
+                        </a>
+                        </span>
+                        <h6 class="u-align-right u-text u-text-13" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" style=" font-family: Cairo; "><a href="{% url 'addproduct' %}" >إضافة&nbsp;</a></h6>
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius u-shape-round u-group-14" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-17">
+                        <span class="u-align-right u-file-icon u-grey-70 u-icon u-icon-circle u-icon-9">
+                          <a href="{% url 'products' %}" style="text-decoration: none;">
+                          <img src="{% static 'dashboard/dashbord/images/10307827-52e8cff8.png' %}" alt="">
+                        </a>
+                        </span>
+                        <h6 class="u-align-right u-text u-text-14"><a href="{% url 'products' %}" style=" font-family: Cairo; "> المنتجات</a></h6>
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius u-shape-round u-group-15" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-18">
+                        <span class="u-align-right u-file-icon u-grey-70 u-icon u-icon-circle u-icon-10">
+                          <a href="{% url 'pixel' %}" style="text-decoration: none;">
+                          <img src="{% static 'dashboard/dashbord/images/7067696-9f57c4d2.png' %}" alt="">
+                        </a>
+                        </span>
+                        <h6 class="u-align-right u-text u-text-15"><a href="{% url 'pixel' %}" style=" font-family: Cairo; ">&nbsp;بكسل</a></h6>
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius u-shape-round u-group-16" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-19">
+                        <span class="u-align-right u-file-icon u-icon u-text-white u-icon-11">
+                          <a href="{% url 'subscriptions' %}" style="text-decoration: none;">
+                          <img src="{% static 'dashboard/dashbord/images/10179258-ced9957c.png' %}" alt="">
+                        </a>
+                        </span>
+                        <h6 class="u-align-right u-text u-text-16"><a href="{% url 'subscriptions' %}" style=" font-family: Cairo; ">شحن&nbsp;</a></h6>
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius u-shape-round u-group-17" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-20">
+                        <span class="u-align-right u-file-icon u-grey-70 u-icon u-icon-circle u-icon-12">
+                          <a href="{% url 'design' %}" style="text-decoration: none;">
+                          <img src="{% static 'dashboard/dashbord/images/3015929-b6f9a7bb.png' %}" alt="">
+                        </a>
+                        </span>
+                        <h6 class="u-align-right u-text u-text-17"><a href="{% url 'design' %}" style=" font-family: Cairo; ">تصميم&nbsp;</a></h6>
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius u-shape-round u-group-18" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-21">
+                        <span class="u-align-right u-file-icon u-grey-70 u-icon u-icon-circle u-icon-13">
+                          <a href="{% url 'settings' %}" style="text-decoration: none;">
+                          <img src="{% static 'dashboard/dashbord/images/9780374-42f3009c.png' %}" alt="">
+                        </a>
+                        </span>
+                        <h6 class="u-align-right u-text u-text-18"><a href="{% url 'settings' %}" style=" font-family: Cairo; ">  إعدادات</a></h6>
+                      </div>
+                    </div>
+                    <div class="custom-expanded u-align-center u-container-align-center u-container-style u-group u-hover-feature u-radius u-shape-round u-group-19" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-22">
+                        <span class="u-align-right u-grey-70 u-icon u-icon-circle u-icon-14">
+                          <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 60 60" style=""><use xlink:href="#svg-c8af"></use></svg>
+                          <svg class="u-svg-content" viewBox="0 0 60 60" x="0px" y="0px" id="svg-c8af" style="enable-background:new 0 0 60 60;"><path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M45.563,30.826l-22,15
+	C23.394,45.941,23.197,46,23,46c-0.16,0-0.321-0.038-0.467-0.116C22.205,45.711,22,45.371,22,45V15c0-0.371,0.205-0.711,0.533-0.884
+	c0.328-0.174,0.724-0.15,1.031,0.058l22,15C45.836,29.36,46,29.669,46,30S45.836,30.64,45.563,30.826z"></path></svg>
+                        </span>
+                        <h6 class="u-align-right u-text u-text-19" style=" font-family: Cairo; "><a href="{% url 'formation' %}" >  دورة</a></h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+    </section>
+    
+    
+    
+    
+
+</body></html>

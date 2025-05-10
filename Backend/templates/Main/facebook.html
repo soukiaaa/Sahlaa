@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>Facebook Actions</title>
+</head>
+<body>
+    <h2>{{ message }}</h2>
+
+    <!-- زر تسجيل الدخول -->
+    <form method="post">
+        {% csrf_token %}
+        <button name="action" value="login">تسجيل الدخول</button>
+    </form>
+
+    <!-- زر إدارة المحتوى -->
+    <form method="post">
+        {% csrf_token %}
+        <button name="action" value="business">إدارة المحتوى</button>
+    </form>
+
+    <!-- زر جلب Access Token -->
+    <form method="post">
+        {% csrf_token %}
+        <button name="action" value="view_source">عرض Access Token</button>
+    </form>
+
+    <!-- زر جلب الكوكيز -->
+    <form method="post">
+        {% csrf_token %}
+        <button name="action" value="get_cookies">جلب الكوكيز</button>
+    </form>
+
+    <!-- زر جلب معلومات الجلسة -->
+    <form method="post">
+        {% csrf_token %}
+        <button name="action" value="get_session_info">جلب معلومات الجلسة</button>
+    </form>
+
+    <!-- عرض الكوكيز إذا تم جلبها -->
+    {% if cookies %}
+        <h3>Cookies:</h3>
+        <pre>{{ cookies }}</pre>
+    {% endif %}
+
+    <!-- عرض معلومات الجلسة إذا تم جلبها -->
+    {% if session_info %}
+        <h3>Session Information:</h3>
+        <pre>{{ session_info }}</pre>
+    {% endif %}
+</body>
+</html>

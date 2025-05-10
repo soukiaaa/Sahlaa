@@ -1,0 +1,931 @@
+{% load static %}
+{% if request.user.is_authenticated %}
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="ar-DZ"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Contact Us">
+    <meta name="description" content="توصيل سريع للطرود, شحن سريع وآمن, توصيل من الباب إلى الباب, خدمات بريد سريع موثوقة, حلول توصيل شاملة في الجزائر,تخزين مريح للبضائع, تغليف احترافي للمنتجات, تحصيل نقدي فعال من العملاء, تتبع الطرود بسهولة, استشارات أعمال لتعزيز استراتيجياتك, مركز اتصال لخدمة العملاء على مدار الساعة, حلول سلسلة توريد مُحسّنة, خدمات التوصيل الإلكتروني لمتاجرك, دعم كامل للتجارة الإلكترونية,منصة 3M Express للتجار, انشئ حساب تاجر بسهولة, تسجيل الدخول إلى 3M Express, أسعار 3M Express التنافسية, 3M Express في وهران, 3M Express في قسنطينة, 3M Express في تمنراست, 3M Express في العلمة, 3M Express في ورقلة, 3M Express في المدية,موثوقة وذات خبرة, سريعة وفعالة, ميسورة التكلفة وعادلة, احترافية ودقيقة, سهلة الاستخدام ومريحة, شاملة تلبي جميع احتياجاتك, موثوقة تضمن سلامة بضائعك, رائدة في مجال التوصيل في الجزائر,3M Express Alger Centre,
+3M Express Bab El Oued,
+3M Express Bouzaréah,
+3M Express Bordj El Bahri,
+3M Express Dar El Beida,
+3M Express Hammamet,
+3M Express Rouiba,
+3M Express Zeralda,
+3M Express Sidi Moussa,
+3M Express Chéraga,
+3M Express Beni Merad,
+3M Express Boumerdès,
+3M Express Khmis Miliana,
+3M Express Tizi Ouzou,
+3M Express Boughezif,
+3M Express Aïn El Hammam,
+3M Express Bordj Menaïl,
+3M Express Tadmait,
+3M Express Akbou,
+3M Express Oued Bouslam,
+3M Express Jijel,
+3M Express Sétif,
+3M Express M'Sila,
+3M Express Constantine,
+3M Express Souk Ahras,
+3M Express Batna,
+3M Express Khenchela,
+3M Express Biskra,
+3M Express Aïn El Beïda,
+3M Express Bordj Kaïd El Kantara,
+3M Express Béchar,
+3M Express Ghardaïa,
+3M Express Ouargla,
+3M Express El Oued,
+3M Express Timimoun,
+3M Express In Salah,
+3M Express Illizi,
+3M Express Djanet,
+3M Express Tindouf,3M Express M'Sila,
+3M Express Chlef,
+3M Express Aïn Defla,
+3M Express Tiaret,
+3M Express Laghouat,
+3M Express Djelfa,
+3M Express Glizane,
+3M Express Oran,
+3M Express Mostaganem,
+3M Express Sidi Bel Abbès,
+3M Express Tlemcen,
+3M Express Saïda,
+3M Express Tiaret,
+3M Express Naâma,
+3M Express Aïn Témouchent,
+3M Express Mascara,
+3M Express Tiaret,
+3M Express Bordj Badji Mokhtar,
+3M Express Ghardaïa,3M Express Ouargla,
+3M Express Ghardaïa,
+3M Express El Oued,
+3M Express Timimoun,
+3M Express In Salah,
+3M Express Illizi,
+3M Express Djanet,
+3M Express Tindouf,3M Express في 58 ولاية جزائرية (بالعربية):
+الشمال:
+3M Express الجزائر العاصمة,
+3M Express باب الوادي,
+3M Express بوزريعة,
+3M Express برج البحري,
+3M Express الدار البيضاء,
+3M Express الحمامات,
+3M Express الرويبة,
+3M Express زرالدة,
+3M Express سيدي موسى,
+3M Express الشراقة,
+3M Express بني مراد,
+3M Express بومرداس,
+3M Express خميس مليانة,
+3M Express تيزي وزو,
+3M Express بوغزير,
+3M Express عين الحمام,
+3M Express برج منايل,
+3M Express تادmait,
+3M Express أقبو,
+3M Express وادي بوسلام,
+3M Express جيجل,
+3M Express سطيف,
+3M Express ميلة,
+3M Express قسنطينة,
+3M Express سوق أهراس,
+3M Express باتنة,
+3M Express خنشلة,
+3M Express بسكرة,
+3M Express عين البيضاء,
+3M Express برج القيطعان,
+3M Express بشار,
+3M Express غرداية,
+3M Express ورقلة,
+3M Express الوادي,
+3M Express تيميمون,
+3M Express عين صالح,
+3M Express إليزي,
+3M Express جانت,
+3M Express تندوف,
+3M Express المسيلة,
+3M Express الشلف,
+3M Express عين الدفلى,
+3M Express تيسمسيلت,
+3M Express الأغواط,
+3M Express الجلفة,
+3M Express غليزان,
+3M Express وهران,
+3M Express مستغانم,
+3M Express سيدي بلعباس,
+3M Express تلمسان,
+3M Express سعيدة,
+3M Express تيسمسيلت,
+3M Express النعامة,
+3M Express عين تموشنت,
+3M Express معسكر,
+3M Express تيسمسيلت,
+3M Express برج باجي مختار,
+3M Express غرداية,3M Express ورقلة,
+3M Express غرداية,
+3M Express الوادي,
+3M Express تيميمون,
+3M Express عين صالح,
+3M Express إليزي,
+3M Express جانت,
+3M Express تندوف,3m express login
+,3m express tarif,3M Express Merchant Platform,Create Merchant Account,,3M Express الجزائر,
+شريك 3M Express,
+موقع 3M Express الإلكتروني,
+تطبيق 3M Express,
+رقم هاتف 3M Express,
+عناوين 3M Express,
+تقييمات 3M Express,">
+    <title>sahladz2024-4-55568</title>
+
+
+    <link rel="stylesheet" href="{% static 'products/css/nicepage.css' %}" media="screen">
+<link rel="stylesheet" href="{% static 'products/css/sahladz2024-4-55568.css' %}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static 'products/js/jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'products/js/nicepage.js' %}" defer=""></script>
+    <meta name="generator" content="Nicepage 7.5.2, nicepage.com">
+    
+    <link rel="icon" href="{% static 'products/images/favicon.png' %}">
+    
+    
+    
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "sahladz",
+		"logo": "images/logosahladzandboost2.png",
+		"sameAs": [
+				"https://linkedin.com/name",
+				"https://facebook.com/name",
+				"https://twitter.com/name",
+				"https://instagram.com/name",
+				"https://pinterest.com/name"
+		]
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="sahladz2024-4-55568">
+    <meta name="twitter:description" content="توصيل سريع للطرود, شحن سريع وآمن, توصيل من الباب إلى الباب, خدمات بريد سريع موثوقة, حلول توصيل شاملة في الجزائر,تخزين مريح للبضائع, تغليف احترافي للمنتجات, تحصيل نقدي فعال من العملاء, تتبع الطرود بسهولة, استشارات أعمال لتعزيز استراتيجياتك, مركز اتصال لخدمة العملاء على مدار الساعة, حلول سلسلة توريد مُحسّنة, خدمات التوصيل الإلكتروني لمتاجرك, دعم كامل للتجارة الإلكترونية,منصة 3M Express للتجار, انشئ حساب تاجر بسهولة, تسجيل الدخول إلى 3M Express, أسعار 3M Express التنافسية, 3M Express في وهران, 3M Express في قسنطينة, 3M Express في تمنراست, 3M Express في العلمة, 3M Express في ورقلة, 3M Express في المدية,موثوقة وذات خبرة, سريعة وفعالة, ميسورة التكلفة وعادلة, احترافية ودقيقة, سهلة الاستخدام ومريحة, شاملة تلبي جميع احتياجاتك, موثوقة تضمن سلامة بضائعك, رائدة في مجال التوصيل في الجزائر,3M Express Alger Centre,
+3M Express Bab El Oued,
+3M Express Bouzaréah,
+3M Express Bordj El Bahri,
+3M Express Dar El Beida,
+3M Express Hammamet,
+3M Express Rouiba,
+3M Express Zeralda,
+3M Express Sidi Moussa,
+3M Express Chéraga,
+3M Express Beni Merad,
+3M Express Boumerdès,
+3M Express Khmis Miliana,
+3M Express Tizi Ouzou,
+3M Express Boughezif,
+3M Express Aïn El Hammam,
+3M Express Bordj Menaïl,
+3M Express Tadmait,
+3M Express Akbou,
+3M Express Oued Bouslam,
+3M Express Jijel,
+3M Express Sétif,
+3M Express M'Sila,
+3M Express Constantine,
+3M Express Souk Ahras,
+3M Express Batna,
+3M Express Khenchela,
+3M Express Biskra,
+3M Express Aïn El Beïda,
+3M Express Bordj Kaïd El Kantara,
+3M Express Béchar,
+3M Express Ghardaïa,
+3M Express Ouargla,
+3M Express El Oued,
+3M Express Timimoun,
+3M Express In Salah,
+3M Express Illizi,
+3M Express Djanet,
+3M Express Tindouf,3M Express M'Sila,
+3M Express Chlef,
+3M Express Aïn Defla,
+3M Express Tiaret,
+3M Express Laghouat,
+3M Express Djelfa,
+3M Express Glizane,
+3M Express Oran,
+3M Express Mostaganem,
+3M Express Sidi Bel Abbès,
+3M Express Tlemcen,
+3M Express Saïda,
+3M Express Tiaret,
+3M Express Naâma,
+3M Express Aïn Témouchent,
+3M Express Mascara,
+3M Express Tiaret,
+3M Express Bordj Badji Mokhtar,
+3M Express Ghardaïa,3M Express Ouargla,
+3M Express Ghardaïa,
+3M Express El Oued,
+3M Express Timimoun,
+3M Express In Salah,
+3M Express Illizi,
+3M Express Djanet,
+3M Express Tindouf,3M Express في 58 ولاية جزائرية (بالعربية):
+الشمال:
+3M Express الجزائر العاصمة,
+3M Express باب الوادي,
+3M Express بوزريعة,
+3M Express برج البحري,
+3M Express الدار البيضاء,
+3M Express الحمامات,
+3M Express الرويبة,
+3M Express زرالدة,
+3M Express سيدي موسى,
+3M Express الشراقة,
+3M Express بني مراد,
+3M Express بومرداس,
+3M Express خميس مليانة,
+3M Express تيزي وزو,
+3M Express بوغزير,
+3M Express عين الحمام,
+3M Express برج منايل,
+3M Express تادmait,
+3M Express أقبو,
+3M Express وادي بوسلام,
+3M Express جيجل,
+3M Express سطيف,
+3M Express ميلة,
+3M Express قسنطينة,
+3M Express سوق أهراس,
+3M Express باتنة,
+3M Express خنشلة,
+3M Express بسكرة,
+3M Express عين البيضاء,
+3M Express برج القيطعان,
+3M Express بشار,
+3M Express غرداية,
+3M Express ورقلة,
+3M Express الوادي,
+3M Express تيميمون,
+3M Express عين صالح,
+3M Express إليزي,
+3M Express جانت,
+3M Express تندوف,
+3M Express المسيلة,
+3M Express الشلف,
+3M Express عين الدفلى,
+3M Express تيسمسيلت,
+3M Express الأغواط,
+3M Express الجلفة,
+3M Express غليزان,
+3M Express وهران,
+3M Express مستغانم,
+3M Express سيدي بلعباس,
+3M Express تلمسان,
+3M Express سعيدة,
+3M Express تيسمسيلت,
+3M Express النعامة,
+3M Express عين تموشنت,
+3M Express معسكر,
+3M Express تيسمسيلت,
+3M Express برج باجي مختار,
+3M Express غرداية,3M Express ورقلة,
+3M Express غرداية,
+3M Express الوادي,
+3M Express تيميمون,
+3M Express عين صالح,
+3M Express إليزي,
+3M Express جانت,
+3M Express تندوف,3m express login
+,3m express tarif,3M Express Merchant Platform,Create Merchant Account,,3M Express الجزائر,
+شريك 3M Express,
+موقع 3M Express الإلكتروني,
+تطبيق 3M Express,
+رقم هاتف 3M Express,
+عناوين 3M Express,
+تقييمات 3M Express,">
+    <meta property="og:title" content="sahladz2024-4-55568">
+    <meta property="og:description" content="توصيل سريع للطرود, شحن سريع وآمن, توصيل من الباب إلى الباب, خدمات بريد سريع موثوقة, حلول توصيل شاملة في الجزائر,تخزين مريح للبضائع, تغليف احترافي للمنتجات, تحصيل نقدي فعال من العملاء, تتبع الطرود بسهولة, استشارات أعمال لتعزيز استراتيجياتك, مركز اتصال لخدمة العملاء على مدار الساعة, حلول سلسلة توريد مُحسّنة, خدمات التوصيل الإلكتروني لمتاجرك, دعم كامل للتجارة الإلكترونية,منصة 3M Express للتجار, انشئ حساب تاجر بسهولة, تسجيل الدخول إلى 3M Express, أسعار 3M Express التنافسية, 3M Express في وهران, 3M Express في قسنطينة, 3M Express في تمنراست, 3M Express في العلمة, 3M Express في ورقلة, 3M Express في المدية,موثوقة وذات خبرة, سريعة وفعالة, ميسورة التكلفة وعادلة, احترافية ودقيقة, سهلة الاستخدام ومريحة, شاملة تلبي جميع احتياجاتك, موثوقة تضمن سلامة بضائعك, رائدة في مجال التوصيل في الجزائر,3M Express Alger Centre,
+3M Express Bab El Oued,
+3M Express Bouzaréah,
+3M Express Bordj El Bahri,
+3M Express Dar El Beida,
+3M Express Hammamet,
+3M Express Rouiba,
+3M Express Zeralda,
+3M Express Sidi Moussa,
+3M Express Chéraga,
+3M Express Beni Merad,
+3M Express Boumerdès,
+3M Express Khmis Miliana,
+3M Express Tizi Ouzou,
+3M Express Boughezif,
+3M Express Aïn El Hammam,
+3M Express Bordj Menaïl,
+3M Express Tadmait,
+3M Express Akbou,
+3M Express Oued Bouslam,
+3M Express Jijel,
+3M Express Sétif,
+3M Express M'Sila,
+3M Express Constantine,
+3M Express Souk Ahras,
+3M Express Batna,
+3M Express Khenchela,
+3M Express Biskra,
+3M Express Aïn El Beïda,
+3M Express Bordj Kaïd El Kantara,
+3M Express Béchar,
+3M Express Ghardaïa,
+3M Express Ouargla,
+3M Express El Oued,
+3M Express Timimoun,
+3M Express In Salah,
+3M Express Illizi,
+3M Express Djanet,
+3M Express Tindouf,3M Express M'Sila,
+3M Express Chlef,
+3M Express Aïn Defla,
+3M Express Tiaret,
+3M Express Laghouat,
+3M Express Djelfa,
+3M Express Glizane,
+3M Express Oran,
+3M Express Mostaganem,
+3M Express Sidi Bel Abbès,
+3M Express Tlemcen,
+3M Express Saïda,
+3M Express Tiaret,
+3M Express Naâma,
+3M Express Aïn Témouchent,
+3M Express Mascara,
+3M Express Tiaret,
+3M Express Bordj Badji Mokhtar,
+3M Express Ghardaïa,3M Express Ouargla,
+3M Express Ghardaïa,
+3M Express El Oued,
+3M Express Timimoun,
+3M Express In Salah,
+3M Express Illizi,
+3M Express Djanet,
+3M Express Tindouf,3M Express في 58 ولاية جزائرية (بالعربية):
+الشمال:
+3M Express الجزائر العاصمة,
+3M Express باب الوادي,
+3M Express بوزريعة,
+3M Express برج البحري,
+3M Express الدار البيضاء,
+3M Express الحمامات,
+3M Express الرويبة,
+3M Express زرالدة,
+3M Express سيدي موسى,
+3M Express الشراقة,
+3M Express بني مراد,
+3M Express بومرداس,
+3M Express خميس مليانة,
+3M Express تيزي وزو,
+3M Express بوغزير,
+3M Express عين الحمام,
+3M Express برج منايل,
+3M Express تادmait,
+3M Express أقبو,
+3M Express وادي بوسلام,
+3M Express جيجل,
+3M Express سطيف,
+3M Express ميلة,
+3M Express قسنطينة,
+3M Express سوق أهراس,
+3M Express باتنة,
+3M Express خنشلة,
+3M Express بسكرة,
+3M Express عين البيضاء,
+3M Express برج القيطعان,
+3M Express بشار,
+3M Express غرداية,
+3M Express ورقلة,
+3M Express الوادي,
+3M Express تيميمون,
+3M Express عين صالح,
+3M Express إليزي,
+3M Express جانت,
+3M Express تندوف,
+3M Express المسيلة,
+3M Express الشلف,
+3M Express عين الدفلى,
+3M Express تيسمسيلت,
+3M Express الأغواط,
+3M Express الجلفة,
+3M Express غليزان,
+3M Express وهران,
+3M Express مستغانم,
+3M Express سيدي بلعباس,
+3M Express تلمسان,
+3M Express سعيدة,
+3M Express تيسمسيلت,
+3M Express النعامة,
+3M Express عين تموشنت,
+3M Express معسكر,
+3M Express تيسمسيلت,
+3M Express برج باجي مختار,
+3M Express غرداية,3M Express ورقلة,
+3M Express غرداية,
+3M Express الوادي,
+3M Express تيميمون,
+3M Express عين صالح,
+3M Express إليزي,
+3M Express جانت,
+3M Express تندوف,3m express login
+,3m express tarif,3M Express Merchant Platform,Create Merchant Account,,3M Express الجزائر,
+شريك 3M Express,
+موقع 3M Express الإلكتروني,
+تطبيق 3M Express,
+رقم هاتف 3M Express,
+عناوين 3M Express,
+تقييمات 3M Express,">
+    <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
+  <body data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="ar" style=" font-family: Cairo;  "><header class="u-clearfix u-grey-5 u-header u-header" id="sec-df96" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="#" class="u-image u-logo u-image-1" data-image-width="668" data-image-height="252">
+          <img src="{% static 'products/images/logosahladzandboost2.png' %}" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-align-left u-font-size-14 u-menu u-menu-one-level u-nav-spacing-25 u-offcanvas u-menu-1" data-responsive-from="XL">
+          <div class="menu-collapse">
+            <a class="u-button-style u-nav-link" href="#" style="padding: 4px 0px; font-size: calc(1em + 8px);">
+              <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 302 302" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7b92"></use></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg-7b92" x="0px" y="0px" viewBox="0 0 302 302" style="enable-background:new 0 0 302 302;" xml:space="preserve" class="u-svg-content"><g><rect y="36" width="302" height="30"></rect><rect y="236" width="302" height="30"></rect><rect y="136" width="302" height="30"></rect>
+</g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/" rel="nofollow">المتجر</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'dashboard' %}"rel="nofollow">الرئسية</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'user' %}"rel="nofollow">المستخدم</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'orders' %}"rel="nofollow">طلبيات</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'addproduct' %}"rel="nofollow">إضافة</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'products' %}"rel="nofollow">المنتجات</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'pixel' %}"rel="nofollow">بكسل</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'subscriptions' %}"rel="nofollow">شحن</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'design' %}"rel="nofollow">تصميم</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'settings' %}"rel="nofollow">إعدادات</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="دورة" rel="nofollow">دورة</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-align-center u-black u-container-align-center u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"  style=" font-family: Cairo; "><a class="u-button-style u-nav-link" href=" المتجر" rel="nofollow">المتجر</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'dashboard' %}" rel="nofollow">الرئسية</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'user' %}" rel="nofollow">المستخدم</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'orders' %}" rel="nofollow">طلبيات</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'addproduct' %}" rel="nofollow">إضافة</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'products' %}" rel="nofollow">المنتجات</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'pixel' %}" rel="nofollow">بكسل</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'subscriptions' %}" rel="nofollow">شحن</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'design' %}" rel="nofollow">تصميم</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'settings' %}" rel="nofollow">إعدادات</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="دورة" rel="nofollow">دورة</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-clearfix u-valign-top-xs u-section-1" id="sec-187f">
+      
+      
+      
+      
+      
+      <div class="u-clearfix u-sheet u-valign-bottom-lg u-sheet-1">
+        <div class="u-align-right u-container-align-right u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <div class="u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-white u-group-2">
+          
+                <div class="u-container-layout u-valign-top-sm u-valign-top-xs u-container-layout-2">
+
+                <div class="u-container-align-center-sm u-container-align-center-xs u-container-style u-expanded-width u-grey-5 u-group u-group-3">
+                  <div class="u-container-layout u-valign-middle-sm u-container-layout-3">
+                    <h5 class="u-align-center u-text u-text-default u-text-1" style=" font-family: Cairo; letter-spacing: -0.5px; ">المنتجات</h5>
+                  </div>
+                </div>
+                <div class="u-container-style u-grey-10 u-group u-group-4">
+                  <div class="u-container-layout u-container-layout-4">
+                    <p class="u-hidden-xs u-text u-text-default u-text-2"> اسم المنتج</p>
+                    <p class="u-text u-text-default u-text-3"> المنتج</p>
+                    <p class="u-align-center u-text u-text-default u-text-4"> سعر المنتج</p>
+                    <p class="u-text u-text-default u-text-5"> معاينة</p>
+                    <p class="u-text u-text-default u-text-6">الاجراء </p>
+                  </div>
+                </div>
+
+                {% for i in page.object_list %} 
+                <div class="u-container-style u-grey-5 u-group u-group-5">
+                    <div class="u-container-layout u-container-layout-5">
+                    <img class="u-image u-image-circle u-preserve-proportions u-image-1" src="{{i.Image.url}}" alt="" data-image-width="526" data-image-height="526">
+                    <p class="u-align-right u-hidden-xs u-text u-text-7">{{i.Product_title}}</p>
+                    <p class="u-align-center u-text u-text-default u-text-8"> {{i.prix}} DA</p>
+
+                    <a href="{% url 'add_prodact' i.id %}">
+                     <span class="u-file-icon u-icon u-icon-1" style=" position: absolute; ">
+                        <img src="{% static 'products/images/2794726.png' %}" alt="">
+                     </span>
+                    </a>
+
+                    <a href="{% url 'delete_product' i.id %}">
+                     <span class="u-file-icon u-icon u-icon-2" style=" position: absolute; ">
+                        <img src="{% static 'products/images/1214594.png' %}" alt="">
+                     </span>
+                    </a>
+
+                    <a href="{% url 'update_product' i.id %}">
+                     <span class="u-file-icon u-icon u-icon-3" style=" position: absolute; ">
+                        <img src="{% static 'products/images/4511541.png' %}" alt="">
+                     </span>
+                    </a>
+                  </div>
+                </div>
+
+                {% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="pa" style=" margin: 0 auto; /* اجعل العنصر في المنتصف أفقياً */ width: 300px; ">
+                    <p class="pag" >page:{{page.number}}/{{page.paginator.num_pages}}</p>  
+                  <div class="center">
+                    <div class="pagination">
+                     {% if page.has_previous %}
+                    <a href="{% url 'products' %}?page={{page.previous_page_number }}">&laquo;</a>
+                     {% endif %}
+            
+            
+                     {% for num_page in page.paginator.page_range %}
+                     {% if page.number == num_page %}
+                    
+                    <a href="{% url 'products' %}?page={{num_page }}" class="active">{{num_page}}</a>
+                    {% else %}
+                    <a href="{% url 'products' %}?page={{num_page }}" >{{num_page}}</a>
+            
+            
+            
+                    {% endif %}
+                    {% endfor %}
+            
+            
+            
+            
+            
+            
+            
+                    {% if page.has_next %} 
+                    <a href="{% url 'products' %}?page={{page.next_page_number }}">&raquo;</a>
+                    {% endif %}
+            
+                    </div>
+                  </div>
+                </div>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              
+            </div>
+          </div>
+        </div>
+        <div class="u-hidden-md u-hidden-sm u-hidden-xs u-shape u-shape-rectangle u-white u-shape-1"></div>
+        <div class="custom-expanded u-container-style u-group u-hidden-md u-hidden-sm u-hidden-xs u-palette-2-light-1 u-group-6" style=" position: fixed; top: 0; /* يمكنك تعديلها حسب الحاجة */ right: 0; ">
+          <div class="u-container-layout u-container-layout-6">
+            <div class="u-container-align-right u-container-style u-expanded-width u-grey-80 u-group u-group-7">
+              <div class="u-container-layout u-container-layout-7">
+                <div class="infinite u-container-style u-expanded-width u-grey-80 u-group u-group-8">
+                  <div class="u-container-layout u-container-layout-8">
+                    <div class="custom-expanded u-align-center u-container-align-center u-container-style u-grey-25 u-group u-hover-feature u-radius-10 u-shape-round u-group-9">
+                      <div class="u-container-layout u-container-layout-9">
+                        <a href="/">
+                         <span class="u-align-right u-file-icon u-grey-70 u-icon u-icon-circle u-icon-4">
+                            <img src="{% static 'products/images/61125-b77a6ca2.png' %}" alt="">
+                         </span>
+                         <h6 class="u-align-right u-text u-text-9"  style=" font-family: Cairo; "><a href="/" >  المتجر</a></h6>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius-10 u-shape-round u-group-10">
+                      <div class="u-container-layout u-container-layout-10">
+                        <a href="{% url 'dashboard' %}">
+                        <span class="u-align-right u-file-icon u-grey-70 u-icon u-icon-circle u-icon-5">
+                            <img src="{% static 'products/images/5729968-81445200.png' %}" alt="">
+                        </span>
+                        <h6 class="u-align-right u-hover-feature u-text u-text-10" style=" font-family: Cairo; "><a href="{% url 'dashboard' %}" > الرئيسية </a></h6>
+                    </a>
+                      </div>
+
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius u-shape-round u-group-11" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-11">
+                        <a href="{% url 'user' %}">
+                        <span class="u-align-right u-file-icon u-grey-70 u-icon u-icon-circle u-icon-6" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                            <img src="{% static 'products/images/6541274-ca440fba.png' %}" alt="">
+                        </span>
+                        <h6 class="u-align-right u-text u-text-11" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""  style=" font-family: Cairo; "><a href="{% url 'user' %}" > المستخدم</a></h6>
+                    </a>
+                    </div>
+
+
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius u-shape-round u-group-12" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-12">
+                        <a href="{% url 'orders' %}"></a>
+                        <span class="u-align-right u-file-icon u-icon u-text-white u-icon-7">
+                            <img src="{% static 'products/images/10377929-42ab18b0.png' %}" alt=""></span>
+                        <h6 class="u-align-right u-text u-text-12" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" style=" font-family: Cairo; "><a href="{% url 'orders' %}" > طلبيات</a></h6>
+                    </a>
+                    </div>
+
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-align-center-xl u-container-style u-expanded-width u-group u-hover-feature u-radius u-shape-round u-group-13" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-13">
+                        <a href="{% url 'addproduct' %}">
+                        <span class="u-align-right u-file-icon u-grey-70 u-icon u-icon-circle u-icon-8">
+                            <img src="{% static 'products/images/9882820-b67bfa30.png' %}" alt=""></span>
+                        <h6 class="u-align-right u-text u-text-13" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" style=" font-family: Cairo; "><a href="{% url 'addproduct' %}" >إضافة </a></h6>
+                    </a>
+                    </div>
+
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius u-shape-round u-group-14" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-14">
+                        <a href="{% url 'products' %}"></a>
+                        <span class="u-align-right u-file-icon u-grey-70 u-icon u-icon-circle u-icon-9">
+                            <img src="{% static 'products/images/10307827-52e8cff8.png' %}" alt=""></span>
+                        <h6 class="u-align-right u-text u-text-14"style=" font-family: Cairo; "><a href="{% url 'products' %}" > المنتجات</a></h6>
+                    </a>
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius u-shape-round u-group-15" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-15">
+                        <a href="{% url 'pixel' %}"></a>
+                        <span class="u-align-right u-file-icon u-grey-70 u-icon u-icon-circle u-icon-10">
+                            <img src="{% static 'products/images/7067696-9f57c4d2.png' %}" alt="">
+                        </span>
+                        <h6 class="u-align-right u-text u-text-15"style=" font-family: Cairo; "><a href="{% url 'pixel' %}" >  بكسل</a></h6>
+                    </a>
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius u-shape-round u-group-16" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-16">
+                        <a href="{% url 'subscriptions' %}">
+                        <span class="u-align-right u-file-icon u-icon u-text-white u-icon-11">
+                            <img src="{% static 'products/images/10179258-ced9957c.png' %}" alt=""></span>
+                        <h6 class="u-align-right u-text u-text-16"style=" font-family: Cairo; "><a href="{% url 'subscriptions' %}" > شحن </a></h6>
+                    </a>
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius u-shape-round u-group-17" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-17">
+                        <a href="{% url 'design' %}">
+                        <span class="u-align-right u-file-icon u-grey-70 u-icon u-icon-circle u-icon-12">
+                            <img src="{% static 'products/images/3015929-b6f9a7bb.png' %}" alt="">
+                        </span>
+                        <h6 class="u-align-right u-text u-text-17" style=" font-family: Cairo; "><a href="{% url 'design' %}" > تصميم </a></h6>
+                    </a>
+
+                      </div>
+                    </div>
+                    <div class="u-align-center u-container-align-center u-container-style u-expanded-width u-group u-hover-feature u-radius u-shape-round u-group-18" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-18">
+                        <a href="{% url 'settings' %}">
+                        <span class="u-align-right u-file-icon u-grey-70 u-icon u-icon-circle u-icon-13">
+                            <img src="{% static 'products/images/9780374-42f3009c.png' %}" alt="">
+                        </span>
+                        <h6 class="u-align-right u-text u-text-18"style=" font-family: Cairo; "><a href="{% url 'settings' %}" >  إعدادات</a></h6>
+                    </a>
+                      </div>
+                    </div>
+                    <div class="custom-expanded u-align-center u-container-align-center u-container-style u-group u-hover-feature u-radius u-shape-round u-group-19" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                      <div class="u-container-layout u-container-layout-19">
+
+                        <span class="u-align-right u-grey-70 u-icon u-icon-circle u-icon-14">
+                            <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 60 60" style=""><use xlink:href="#svg-c8af"></use></svg><svg class="u-svg-content" viewBox="0 0 60 60" x="0px" y="0px" id="svg-c8af" style="enable-background:new 0 0 60 60;"><path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M45.563,30.826l-22,15
+	C23.394,45.941,23.197,46,23,46c-0.16,0-0.321-0.038-0.467-0.116C22.205,45.711,22,45.371,22,45V15c0-0.371,0.205-0.711,0.533-0.884
+	c0.328-0.174,0.724-0.15,1.031,0.058l22,15C45.836,29.36,46,29.669,46,30S45.836,30.64,45.563,30.826z"></path></svg></span>
+                        <h6 class="u-align-right u-text u-text-19"style=" font-family: Cairo; ">دورة</h6>
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+    </section>
+    
+    
+    
+    
+
+  
+</body></html>
+
+
+{% else %}
+
+
+
+
+
+
+
+
+<link rel="shortcut icon" type="image/x-icon" href="bboy/img/favicon.png">
+<!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'bboy/css/preloader.css' %}">
+    <link rel="stylesheet" href="{% static 'bboy/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'bboy/css/meanmenu.css' %}">
+    <link rel="stylesheet" href="{% static 'bboy/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'bboy/css/owl-carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'bboy/css/swiper-bundle.css' %}">
+    <link rel="stylesheet" href="{% static 'bboy/css/backtotop.css' %}">
+    <link rel="stylesheet" href="{% static 'bboy/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'bboy/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'bboy/flaticon/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'bboy/css/font-awesome-pro.css' %}">
+    <link rel="stylesheet" href="{% static 'bboy/css/default.css' %}">
+    <link rel="stylesheet" href="{% static 'bboy/css/style.css' %}">
+
+
+
+
+
+
+
+
+<body>
+  <header class="u-clearfix u-grey-75 u-header u-header" id="sec-df96"><div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-sheet-1">
+    <a href="/" class="u-hidden-xs u-image u-logo u-image-1" data-image-width="668" data-image-height="254">
+      <img src="{% static 'dashboard_pge1/css/images/logosahlaSHOP.png' %}" class="u-logo-image u-logo-image-1">
+    </a>
+    <p class="u-text u-text-default u-text-1"> نعدكم بأفضل خدمة زبائن ، وأحسن الأسعار</p>
+  </div></header>
+    <div class="container">
+  
+        <div class="container-fluid col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                {% if messages %}
+                    <div class="container mt-3">
+                        <div class="messages">
+                            {% for message in messages %}
+                                {% if message.tags %}
+                                <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                                    {{ message }}
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+
+  
+                <div class="col-10 col-sm-8 col-lg-6">
+
+                    {% if request.user.is_authenticated %}
+                        <img src="{{ profile.avatar.url }}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                        width="700" height="500" loading="lazy">
+
+                         
+                    {% else %}
+                        <img src="{% static 'serialstor/images/adsstor.png' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                        width="700" height="500" loading="lazy">
+                    {% endif %}
+                </div>
+                <div class="col-lg-6">
+                    {% if request.user.is_authenticated %}
+
+                    
+                    {% endif %}
+                    <h1 class=" fw-bold lh-1 mb-3" style=" font-size: 1.6rem; font-family: Cairo; ">تسجيل دخول او فتح حساب جديد</h1>
+                    <p class="bio-para">
+                        {% if request.user.is_authenticated %} 
+                        
+                        {{ profile.bio }}
+                        
+                        {% else %}
+
+                        &nbsp;
+
+                        {% endif %}
+                    
+                    </p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        {% if not request.user.is_authenticated %}
+                            <a href="{% url 'register_view' %}"><button type="button" class="btn btn-primary btn-md px-4 me-md-2" style=" font-family: Cairo; ">إنشاء حساب </button></a>
+                            <a href="{%url 'login_view' %}"><button type="button" class="btn btn-success btn-md px-4 me-md-2" style=" font-family: Cairo; ">تسجيل دخول</button></a>
+                        {% else %}
+                            <a href="{% url 'logout_view' %}"><button type="button" class="btn btn-danger btn-md px-4 me-md-2">Logout</button></a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="b-example-divider"></div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+   
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endif %}

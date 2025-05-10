@@ -1,0 +1,18 @@
+INSERT INTO shoop.profiles_interfacewebsite (
+    "Logo", "title", "title_big", "title_small", "cover", 
+    "menu1", "menu2", "menu3", "menu4", "menu5", 
+    "facebook", "instagram", "twitter", "pantirst", "linkid", "num_phone"
+) VALUES (
+    'media/slider_imgs/logo.png', 
+    'عنوان الموقع', 
+    'عنوان كبير', 
+    'عنوان صغير', 
+    'media/slider_imgs/cover.jpg', 
+    'الرئيسية', 'عن الموقع', 'الخدمات', 'المتجر', 'اتصل بنا',
+    'https://facebook.com/example', 
+    'https://instagram.com/example', 
+    'https://twitter.com/example', 
+    'https://pinterest.com/example', 
+    'https://linkedin.com/example', 
+    '+213123456789'
+);

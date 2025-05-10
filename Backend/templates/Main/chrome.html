@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تنزيل الملفات</title>
+</head>
+<body dir="rtl">
+    <h1>تنزيل الملفات</h1>
+    
+    {% if message %}
+        <p style="color: green;">{{ message }}</p>
+    {% endif %}
+    
+    <form method="POST">
+        {% csrf_token %}
+        <label for="link_id">اختر رابط:</label>
+        <select name="link_id" required>
+            {% for link in links %}
+                <option value="{{ link.id }}">{{ link.name }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        
+        <label for="download_path">مسار التنزيل (اختياري):</label>
+        <input type="text" name="download_path" placeholder="مثال: C:/Downloads/MyFiles">
+        <br><br>
+        
+        <button type="submit">تنزيل</button>
+    </form>
+</body>
+</html>

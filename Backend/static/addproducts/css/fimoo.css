@@ -1,0 +1,1170 @@
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y)* -1);
+    margin-right: calc(var(--bs-gutter-x)* -.5);
+    margin-left: calc(var(--bs-gutter-x)* -.5);
+  }
+  @media (min-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  #id_Product_title{
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    background-image: none;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 6px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    color: inherit;
+    height: auto;
+    margin-block: 9px;
+  
+  
+  }
+  #id_prix_old{
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    background-image: none;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 6px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    color: inherit;
+    height: auto;
+    margin-block: 9px;
+  
+  
+  }
+  
+  
+  
+  
+  #id_wilaia{
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    background-image: none;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 6px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    color: inherit;
+    height: auto;
+    margin-block: 9px;
+  
+  
+  }
+  
+  
+  #id_prix_livraison_domicile{
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    background-image: none;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 6px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    color: inherit;
+    height: auto;
+    margin-block: 9px;
+  
+  
+  }
+  
+  
+  
+  #id_prix_livraison_desktop{
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    background-image: none;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 6px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    color: inherit;
+    height: auto;
+    margin-block: 9px;
+  
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   #id_Logo{
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    background-image: none;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 6px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    color: inherit;
+    height: auto;
+    margin-block: 9px;
+  
+  
+  }
+  
+  
+  #id_title{
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    background-image: none;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 6px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    color: inherit;
+    height: auto;
+    margin-block: 9px;
+  
+  
+  }
+  
+  
+  #id_cover{
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    background-image: none;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 6px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    color: inherit;
+    height: auto;
+    margin-block: 9px;
+  
+  
+  }
+  
+  
+  
+  #id_menu1{
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    background-image: none;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 6px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    color: inherit;
+    height: auto;
+    margin-block: 9px;
+  
+  
+  }
+  
+  #id_menu2{
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    background-image: none;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 6px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    color: inherit;
+    height: auto;
+    margin-block: 9px;
+  
+  
+  }
+  #id_menu3{
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    background-image: none;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 6px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    color: inherit;
+    height: auto;
+    margin-block: 9px;
+  
+  
+  }
+  #id_menu4{
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    background-image: none;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 6px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    color: inherit;
+    height: auto;
+    margin-block: 9px;
+  
+  
+  }
+  #id_menu5{
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    background-image: none;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 6px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    color: inherit;
+    height: auto;
+    margin-block: 9px;
+  
+  
+  }
+  
+  
+  
+  #id_facebook{
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    background-image: none;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 6px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    color: inherit;
+    height: auto;
+    margin-block: 9px;
+  
+  
+  }
+  
+  #id_instagram{
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    background-image: none;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 6px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    color: inherit;
+    height: auto;
+    margin-block: 9px;
+  
+  
+  }
+  #id_pantirst{
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    background-image: none;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 6px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    color: inherit;
+    height: auto;
+    margin-block: 9px;
+  
+  
+  }
+  #id_linkid{
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    background-image: none;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 6px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    color: inherit;
+    height: auto;
+    margin-block: 9px;
+  
+  
+  }
+  #id_twitter{
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    background-image: none;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 6px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    color: inherit;
+    height: auto;
+    margin-block: 9px;
+  
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  #id_tail1{
+  
+    visibility: hidden;
+  }
+  #id_tail2{
+  
+    visibility: hidden;
+  }
+  #id_tail3{
+  
+    visibility: hidden;
+  }
+  #id_tail4{
+  
+    visibility: hidden;
+  }
+  #id_tail5{
+  
+    visibility: hidden;
+  }
+  #id_tail6{
+  
+    visibility: hidden;
+  }
+  #id_tail7{
+  
+    visibility: hidden;
+  }
+  #id_tail8{
+  
+    visibility: hidden;
+  }
+  #id_tail9{
+  
+    visibility: hidden;
+  }
+  #id_tail10{
+  
+    visibility: hidden;
+  }
+  #id_tail11{
+  
+    visibility: hidden;
+  }
+  #id_tail12{
+  
+    visibility: hidden;
+  }
+  #id_tail13{
+  
+    visibility: hidden;
+  }
+  #id_tail14{
+    visibility: hidden;
+  }
+  #id_tail15{
+  
+    visibility: hidden;
+  }
+  
+  
+  
+  
+  
+  
+  
+  #id_Tail_clothesr1{
+  
+    visibility: hidden;
+  }
+  #id_Tail_clothes3{
+  
+    visibility: hidden;
+  }
+  #id_Tail_clothes5{
+  
+    visibility: hidden;
+  }
+  #id_Tail_clothes2{
+  
+    visibility: hidden;
+  }
+  #id_Tail_clothes4{
+  
+    visibility: hidden;
+  }
+  #id_Tail_clothes6{
+  
+    visibility: hidden;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  #id_color1{
+  
+    visibility: hidden;
+  }
+  #id_color2{
+  
+    visibility: hidden;
+  }
+  #id_color3{
+  
+    visibility: hidden;
+  }
+  #id_color4{
+  
+    visibility: hidden;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  #id_username{
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    background-image: none;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 6px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    color: inherit;
+    height: auto;
+    margin-block: 9px;
+  
+  
+  }
+  #id_nom{
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    background-image: none;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 6px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    color: inherit;
+    height: auto;
+    margin-block: 9px;
+  
+  
+  }
+  #id_Prenom{
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    background-image: none;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 6px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    color: inherit;
+    height: auto;
+    margin-block: 9px;
+  
+  
+  }
+  #id_imagecard{
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    background-image: none;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 6px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    color: inherit;
+    height: auto;
+    margin-block: 9px;
+  
+  
+  }
+  #id_imageegister{
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    background-image: none;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 6px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    color: inherit;
+    height: auto;
+    margin-block: 9px;
+  
+  
+  }
+  
+  
+  
+  
+  #bi:hover {
+    font-family: Cairo;
+    color: #111111;
+    background-color: #f3be4d;
+    width: 100%;
+      padding: 10px 0;
+      border-radius: 6px;
+      border: none;
+  }
+  #bi {
+    font-family: Cairo;
+    border: none;
+    border-radius: 6px;
+    color: #111111;
+    background-color: #f18919;
+    width: 100%;
+      padding: 10px 0;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  #bb:hover {
+      color: #111111;
+      background-color: #dddddd;
+  }
+  
+  
+  
+  #id_color{
+      background-color: #e5e5e5;
+      display: block;
+      width: 100%;
+      padding: 9px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      margin-block: 9px;
+    
+      
+  }
+  #id_numkamiya{
+      background-color: #e5e5e5;
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      margin-block: 9px;
+    
+      
+  }
+  #id_Tail{
+      background-color: #e5e5e5;
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      margin-block: 9px;
+    
+      
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  #id_product{
+      background-color: #e5e5e5;
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      margin-block: 9px;
+    
+      
+  }
+  #id_ladresse_complete{
+      background-color: #e5e5e5;
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      margin-block: 9px;
+    
+      
+  }
+  
+  
+  
+  
+  
+  
+  
+  #id_nom_et_Prenom{
+      background-color: #e5e5e5;
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      margin-block: 9px;
+    
+      
+  }
+  #id_num1{
+      background-color: #e5e5e5;
+      display: block;
+      width: 40%;
+      padding: 6px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      margin-block: 9px;
+    
+      
+  }
+  
+  #id_wilayaa{
+      background-color: #e5e5e5;
+      display: block;
+      width: 40%;
+      padding: 6px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      margin-block: 9px;
+    
+      
+  }
+  #id_Product_title{
+      background-color: #e5e5e5;
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      margin-block: 9px;
+    
+      
+  }
+  
+  #id_prix{
+  background-color: #e5e5e5;
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      margin-block: 9px;
+         
+  }
+  #id_Product_Description{
+      
+      background-color: #e5e5e5;
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      margin-block: 9px;
+      
+  }
+  #id_url_video_youtube{
+      background-color: #e5e5e5;
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      margin-block: 9px;	
+  }
+  
+  #id_title_Image_2{
+      
+      background-color: #e5e5e5;
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      margin-block: 9px;
+  }
+  
+  #id_text_Image_2{
+      
+      background-color: #e5e5e5;
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      margin-block: 9px;
+  }
+  
+  #id_Image{
+      
+      background-color: #e5e5e5;
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      margin-block: 9px;
+  }
+  #id_Image_2{
+      
+      background-color: #e5e5e5;
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      margin-block: 9px;
+  }
+  
+  
+  
+  #id_title_Image_foter{
+      
+      background-color: #e5e5e5;
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      margin-block: 9px;
+  }
+  
+  #id_Image_center{
+      
+      background-color: #e5e5e5;
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      margin-block: 9px;
+  }
+  
+  #id_text_Image_foter{
+      
+      background-color: #e5e5e5;
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      margin-block: 9px;display: block;
+      width: 100%;
+  }
+  
+  #id_link{
+      
+      background-color: #e5e5e5;
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      margin-block: 9px;
+  }
+  
+  
+  
+  #id_active_color{
+      
+    background-color: #e5e5e5;
+    display: block;
+    width: 100%;
+    padding: 2px 10px;
+    background-image: none;
+    background-clip: padding-box;
+    border: none;
+    border-radius: 6px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    color: inherit;
+    height: auto;
+  }
+  
+  
+  
+  
+  #id_active_tailclothes{
+      
+      background-color: #e5e5e5;
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      
+  }
+  
+  
+  #id_active_tail{
+      
+      background-color: #e5e5e5;
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      
+  }
+  
+  #id_partion{
+      
+      background-color: #e5e5e5;
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      margin-block: 9px;
+  }
+  
+  
+  
+  
+  
+  
+  #id_Image_foter_1{
+      
+      background-color: #e5e5e5;
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      margin-block: 9px;
+  }
+  #id_Image_foter_2{
+      
+      background-color: #e5e5e5;
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      margin-block: 9px;
+  }
+  #id_Image_foter_3{
+      
+      background-color: #e5e5e5;
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      background-image: none;
+      background-clip: padding-box;
+      border: none;
+      border-radius: 6px;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      color: inherit;
+      height: auto;
+      margin-block: 9px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  #bb:hover {
+    color: #111111;
+    background-color: #dddddd;
+  } 
+  
+  

@@ -1,0 +1,128 @@
+http://127.0.0.1:8000/
+----------------------
+py manage.py runserver
+-----------------
+pipenv shell
+django-admin
+python manage.py runserver 
+python manage.py runserver example.com:8000
+-----------------------------
+python manage.py makemigrations --merge
+python manage.py migrate BooklistApp zero
+
+---------------------
+python manage.py makemigrations profiles
+
+python manage.py migrate profiles
+
+-------------------------
+python manage.py makemigrations BooklistApp
+python manage.py makemigrations
+python manage.py migrate
+------------------------
+python manage.py migrate_schemas
+------------------------------
+python manage.py flush
+-----------------------------
+python manage.py migrate_schemas --shared
+----------------------------
+python manage.py createsuperuser
+py manage.py createsuperuser
+------------------
+python manage.py create_tenant
+python manage.py startapp sweet_shared
+python manage.py startapp sweet_tenant
+python manage.py create_tenant_superuser
+
+-------------------
+http://127.0.0.1:8000/
+-------------------------
+python manage.py startapp app
+
+
+--------------------------------
+FOR HOSTING
+pip install mysqlclient==2.1.1
+pip install pymysql
+
+
+
+pip install python-form
+pip install Django
+pip install django==4.0.4
+pip install postgres
+pip install psycopg2
+pip install django-tenants
+pip install django-tenant-schemas
+pip install tenant
+
+pip install PyMySQL
+pip install Pillow==2.2.1
+pip install Pillow
+pip install django-crispy-forms
+pip install Pillow
+pip install pathlib
+pip install pathlib2
+
+
+pip install numpy
+pip install numpy psycopg2-binary
+
+pip install postgres
+pip install psycopg2
+
+pip install django==3.2 motwafak ma3a nosskha PostgreSQL 10.23
+
+
+pip install Django==2.2.*
+pip install Django==2.2.24
+
+pip install django==4.2.16
+
+
+pip install libtiff
+pip install pylibtiff
+
+
+
+pip install djangorestframework
+
+---------------
+passenger_wsgi.py
+application
+-----------------
+django-admin startapp client
+django-admin startapp tenant
+django-admin startproject multitenant .
+django-admin startapp booklistapp
+django-admin startapp tenant
+
+django-admin startapp shared
+django-admin startapp store
+----------------
+
+---------------
+Create Virtual environment:
+virtualenv multitenant
+py -3 -m venv env
+---------------------
+instll environment:
+pip install virtualenv
+------------------------
+Activate environment:
+Run the this command:Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force
+
+./multitenant/Scripts/activate.ps1
+
+
+--------------
+
+python manage.py shell
+from shared.models import Client
+tenant = Client(domain_url='localhost',schema_name='public',name='Public',on_trial=False)
+tenant.save()
+---------------
+python manage.py createsuperuser --username=admin --schema=public
+
+----------------------
+python manage.py clearsessions

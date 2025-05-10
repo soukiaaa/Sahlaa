@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serial Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 2rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            width: 400px; /* تحديد عرض النموذج */
+        }
+        h1 {
+            color: #ff6600;
+            margin-bottom: 1rem;
+        }
+        form {
+            text-align: left; /* جعل النصوص على اليسار */
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        label {
+            display: block; /* جعل العناصر تظهر بشكل منفصل */
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        input, button {
+            padding: 0.75rem;
+            border-radius: 5px;
+            border: 1px solid #cccccc;
+            width: calc(100% - 16px); /* حساب عرض الحقل مع هامش الحدود */
+        }
+        button {
+            background-color: #ff6600;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e65c00;
+        }
+        .message {
+            margin-top: 1rem;
+            padding: 0.75rem;
+            border-radius: 5px;
+            color: #ffffff;
+        }
+        .message.success {
+            background-color: #28a745;
+        }
+        .message.error {
+            background-color: #dc3545;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            color: #dc3545;
+        }
+        ul li {
+            background-color: #f8d7da;
+            padding: 0.5rem;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SAHLA BOOST</h1>
+        <form method="post">
+            {% csrf_token %}
+            <label for="id_name_desktop">Name desktop:</label>
+            {{ form.name_desktop }}
+            <label for="id_serial">Serial:</label>
+            {{ form.serial }}
+            <label for="id_conferm_serial">Confirm Serial:</label>
+            {{ form.conferm_serial }}
+
+
+            
+            <button type="submit">Submit</button>
+        </form>
+        {% if message %}
+            <p class="message {% if 'نجاح' in message %}success{% else %}error{% endif %}">{{ message }}</p>
+        {% endif %}
+        {% if form.errors %}
+            <ul>
+                {% for field in form %}
+                    {% for error in field.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                {% endfor %}
+                {% for error in form.non_field_errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</body>
+</html>
