@@ -1543,7 +1543,7 @@ class SignupAPIView(APIView):
             password = data['password']
             phonenumber = data['phonenumber']
 
-            domain_name = f"{domain_part}.localhost"
+            domain_name = f"{domain_part}"
             schema_name = domain_part
 
             if Client.objects.filter(name=name).exists():
