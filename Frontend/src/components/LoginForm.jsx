@@ -50,15 +50,21 @@ export function LoginForm() {
                         <div className="grid gap-2">
                             <label htmlFor="email" className="text-sm font-medium">
 إسم المستخدم                            </label>
-                            <input
-                                name="username"
-                                id="email"
-                                type="text"
-                                placeholder="ادخل اسم المستخدم"
-                                onChange={handleChange}
-                                required
-                                className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black"
-                            />
+<input
+  name="username"
+  id="email"
+  type="text"
+  placeholder="ادخل اسم المستخدم"
+  value={formData.username}
+  onChange={(e) => {
+    const lowercase = e.target.value.toLowerCase();
+    const onlyLetters = lowercase.replace(/[^a-z]/g, '');
+    setFormData({ ...formData, username: onlyLetters });
+  }}
+  required
+  className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black"
+/>
+
                         </div>
 
                         <div className="grid gap-2">
@@ -70,14 +76,24 @@ export function LoginForm() {
                                     نسيت كلمة المرور؟
                                 </a>
                             </div>
-                            <input
-                                name="password"
-                                id="password"
-                                type="password"
-                                onChange={handleChange}
-                                required
-                                className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black"
-                            />
+<input
+  name="password"
+  id="password"
+  type="password"
+  value={formData.password}   // لازم تربط القيمة بالحالة عشان التحديث يكون متحكم فيه
+  onChange={(e) => {
+    const value = e.target.value;
+    // حذف الحروف العربية والمسافات
+    const filtered = value.replace(/[\u0600-\u06FF\s]/g, '');
+    setFormData({ ...formData, password: filtered });  // تحديث الحالة مباشرة مع القيمة المفلترة
+  }}
+  pattern="^[^\u0600-\u06FF\s]+$"
+  title="كلمة المرور لا يجب أن تحتوي على حروف عربية أو فراغات."
+  required
+  className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black"
+/>
+
+
                         </div>
 
                         <button
